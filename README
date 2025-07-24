@@ -24,7 +24,7 @@
     text-align: center;
   }
   .item img {
-    width: 100%;
+    width: 80%;
     height: auto;
     display: block;
     border: 1px solid #ccc;
@@ -54,6 +54,19 @@
 <h2>Kích thước 800x600</h2>
 <div class="gallery">
   <div class="item"><img src="https://raw.githubusercontent.com/ggshi1/Web/refs/heads/main/bm2500.webp" alt="Kích thước 800x600"></div>
+</div>
+
+<!-- Kích thước: 800x800 -->
+<div class="gallery">
+ <div class="item"><img src="https://raw.githubusercontent.com/ggshi1/Web/refs/heads/main/anh_game_nolimit_3.gif" alt="Kích thước 800x800"></div>
+ <div class="item"><img src="https://raw.githubusercontent.com/ggshi1/Web/refs/heads/main/BM_list.gif" alt="Kích thước 800x800"></div>
+<div class="item"><img src="https://raw.githubusercontent.com/ggshi1/Web/refs/heads/main/BM_LTD_very.gif" alt="Kích thước 800x800"></div>
+<div class="item"><img src="https://raw.githubusercontent.com/ggshi1/Web/refs/heads/main/chiendich1.gif" alt="Kích thước 800x800"></div>
+<div class="item"><img src="https://raw.githubusercontent.com/ggshi1/Web/refs/heads/main/smit_900do.gif" alt="Kích thước 800x800"></div>
+<div class="item"><img src="https://raw.githubusercontent.com/ggshi1/Web/refs/heads/main/smit_nolimit.gif" alt="Kích thước 800x800"></div>
+<div class="item"><img src="https://raw.githubusercontent.com/ggshi1/Web/refs/heads/main/smit_nolimit_game.gif" alt="Kích thước 800x800"></div>
+<div class="item"><img src="https://raw.githubusercontent.com/ggshi1/Web/refs/heads/main/bm2500.webp" alt="Kích thước 800x800"></div>
+
 </div>
 
 <!-- Kích thước: 1024x1024 -->
