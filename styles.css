@@ -1,0 +1,394 @@
+body {
+
+    background-image: url('https://shiads.shop/img/banner.png');
+
+    background-size: cover; /* Phủ kín toàn bộ trang mà không làm méo ảnh */
+
+    background-position: center center; /* Căn giữa ảnh nền */
+
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+
+    background-attachment: fixed; /* Giữ ảnh nền cố định khi cuộn trang */
+
+}
+
+
+
+body {
+
+    /* Đặt lớp phủ màu đen mờ bên trên ảnh nền */
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://shiads.shop/img/banner.png');
+
+    
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+}.highlightt {
+    color: #007bff;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #f1f8ff;
+    padding: 15px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  .highlightt:hover {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.02);
+  }
+    .highlight {
+    color: #007bff; /* Màu xanh dương nổi bật */
+    font-weight: bold; /* Chữ đậm */
+    font-size: 1.1em; /* Tăng kích thước chữ một chút */
+}
+    .btn-sm {
+    font-size: 1rem; /* Giảm kích thước chữ nếu cần */
+    padding: 1rem 1.5rem; /* Giảm padding nếu cần */
+}
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+        transition: background-color 0.3s ease;
+    }
+    /* USDT */
+  .center-container {
+        display: flex;
+        flex-direction: column; /* Xếp dọc để căn giữa */
+        align-items: center; /* Căn giữa ngang */
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+    }
+    .payment-label {
+        font-size: 1rem; /* Kích thước chữ vừa phải */
+        margin-bottom: 0.5rem; /* Khoảng cách dưới nhãn */
+        color: #6c757d; /* Màu chữ giống text-muted */
+    }
+    .payItem.selectPay {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 12px; /* Padding nhỏ để nút gọn */
+        max-width: 150px; /* Chiều rộng tối đa để nút nhỏ */
+        margin: 0 auto 1rem; /* Căn giữa ngang và khoảng cách dưới */
+        border: 1px solid #007bff; /* Viền nhẹ để giống nút */
+        border-radius: 4px; /* Bo góc nhẹ cho nút ngang */
+        background-color: #f8f9fa; /* Nền nhẹ */
+        cursor: pointer; /* Con trỏ chuột như nút */
+        transition: background-color 0.2s; /* Hiệu ứng hover */
+    }
+    .payItem.selectPay:hover {
+        background-color: #e9ecef; /* Hiệu ứng hover */
+    }
+    .payFunc {
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem; /* Chữ nhỏ */
+    }
+    .payFunc .itemImg {
+        width: 20px; /* Ảnh nhỏ */
+        height: auto;
+        margin-right: 8px; /* Khoảng cách giữa ảnh và chữ */
+    }
+    .amount-input {
+        max-width: 300px; /* Giới hạn chiều rộng trường nhập */
+        margin: 0 auto; /* Căn giữa trường nhập */
+    }
+    /* end usdt */
+    .d-flex.gap-2 {
+    gap: 10px; /* Khoảng cách giữa các button */
+}
+.btn-outline-primary {
+    max-width: 200px; /* Giới hạn chiều rộng button sao chép */
+}
+.btn-primary {
+    max-width: 200px; /* Giới hạn chiều rộng button đóng */
+}
+    .success-gif {
+            display: block;
+            margin: 0 auto 15px;
+            max-width: 100px; /* Giảm kích thước tối đa */
+            max-height: 100px; /* Giảm chiều cao tối đa */
+            height: auto;
+        }
+.progress-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .progress-step {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #6c757d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+        .progress-line {
+            flex-grow: 1;
+            height: 4px;
+            background-color: #6c757d;
+            transition: width 0.3s ease-in-out;
+        }
+        .order-highlight {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #e67e22;
+        }
+        .price-highlight {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #e67e22;
+        }
+  #button-contact-vr {
+        position: fixed;
+        bottom: 100px; /* Cách mép dưới 20px */
+        right: 10px; /* Cách mép phải 20px */
+        z-index: 99999;
+    }
+
+    #gom-all-in-one {
+        display: flex;
+        flex-direction: column; /* Xếp dọc */
+        gap: 10px; /* Khoảng cách giữa các nút */
+    }
+
+    #button-contact-vr .button-contact {
+        position: relative;
+        margin-top: 0; /* Loại bỏ margin-top âm để tránh chồng lấn */
+    }
+
+    #button-contact-vr .button-contact .phone-vr {
+        position: relative;
+        visibility: visible;
+        background-color: transparent;
+        width: 90px;
+        height: 90px;
+        cursor: pointer;
+        z-index: 11;
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translateZ(0);
+        transition: visibility .5s;
+        left: 0;
+        bottom: 0;
+        display: block;
+    }
+
+    .phone-vr-circle-fill {
+        width: 65px;
+        height: 65px;
+        top: 12px;
+        left: 12px;
+        position: absolute;
+        box-shadow: 0 0 0 0 #c31d1d;
+        background-color: rgba(230, 8, 8, 0.7); /* Màu đỏ mặc định */
+        border-radius: 50%;
+        border: 2px solid transparent;
+        -webkit-animation: phone-vr-circle-fill 2.3s infinite ease-in-out;
+        animation: phone-vr-circle-fill 2.3s infinite ease-in-out;
+        transition: all .5s;
+        -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-animation: zoom 1.3s infinite;
+        animation: zoom 1.3s infinite;
+    }
+
+    .phone-vr-img-circle {
+        background-color: #e60808; /* Màu đỏ mặc định */
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        top: 25px;
+        left: 25px;
+        position: absolute;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        -webkit-animation: phone-vr-circle-fill 1s infinite ease-in-out;
+        animation: phone-vr-circle-fill 1s infinite ease-in-out;
+    }
+
+    .phone-vr-img-circle a {
+        display: block;
+        line-height: 37px;
+    }
+
+    .phone-vr-img-circle img {
+        max-height: 25px;
+        max-width: 27px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+
+    /* Tùy chỉnh màu sắc theo từng nút */
+    #contact-vr .phone-vr-circle-fill {
+        background-color: rgba(33, 150, 243, 0.7); /* Màu xanh Skype */
+    }
+    #contact-vr .phone-vr-img-circle {
+        background-color: #2196F3;
+    }
+
+    #fanpage-vr .phone-vr-circle-fill {
+        background-color: rgba(24, 119, 242, 0.7); /* Màu xanh Facebook */
+    }
+    #fanpage-vr .phone-vr-img-circle {
+        background-color: #1877f2;
+    }
+
+    #telegram-vr .phone-vr-circle-fill {
+        background-color: rgba(44, 159, 216, 0.74); /* Màu xanh Telegram */
+    }
+    #telegram-vr .phone-vr-img-circle {
+        background-color: #2c9fd8;
+    }
+
+    #whatsapp-vr .phone-vr-circle-fill {
+        background-color: rgba(35, 217, 72, 0.7); /* Màu xanh lá WhatsApp */
+    }
+    #whatsapp-vr .phone-vr-img-circle {
+        background-color: #1cd741;
+    }
+
+    @-webkit-keyframes phone-vr-circle-fill {
+        0% {
+            -webkit-transform: rotate(0) scale(1) skew(1deg);
+        }
+        10% {
+            -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+        }
+        20% {
+            -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+        }
+        30% {
+            -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+        }
+        40% {
+            -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+        }
+        50% {
+            -webkit-transform: rotate(0) scale(1) skew(1deg);
+        }
+        100% {
+            -webkit-transform: rotate(0) scale(1) skew(1deg);
+        }
+    }
+
+    @-webkit-keyframes zoom {
+        0% {
+            transform: scale(0.9);
+        }
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 15px transparent;
+        }
+        100% {
+            transform: scale(0.9);
+            box-shadow: 0 0 0 0 transparent;
+        }
+    }
+
+    @keyframes zoom {
+        0% {
+            transform: scale(0.9);
+        }
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 15px transparent;
+        }
+        100% {
+            transform: scale(0.9);
+            box-shadow: 0 0 0 0 transparent;
+        }
+    }
+
+    /* Ẩn phone-bar trên mobile */
+    @media (max-width: 736px) {
+        .phone-bar {
+            display: none;
+        }
+    }
+
+    /* Animation cho modal */
+    .orderModal .modal-content {
+        border-radius: 1rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    /* Thanh tiến độ */
+    .progress-step {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+    .progress-line-container {
+        position: absolute;
+        top: 1.25rem;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background-color: #e9ecef;
+        z-index: -1;
+    }
+    .progress-line {
+        height: 100%;
+        background: linear-gradient(to right, #2563eb, #4f46e5);
+        transition: width 0.3s ease;
+    }
+    /* Hình ảnh sản phẩm */
+    .step-content img {
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    /* Input */
+    .form-control {
+        transition: all 0.3s ease;
+    }
+    .form-control:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+    }
+    /* Các style cũ của bạn giữ nguyên ở đây */
+
+    /* CSS cho ảnh nền responsive */
+    @media (max-width: 991.98px) {
+        #home {
+            /* Ẩn ảnh nền trên thiết bị di động để giao diện gọn gàng hơn */
+            background-image: none !important;
+        }
+    }
+
+
+	<style>
+    /* Các style cũ của bạn giữ nguyên ở đây */
+
+    /* CSS cho ảnh nền responsive */
+    @media (max-width: 991.98px) {
+        #home {
+            /* Ẩn ảnh nền trên thiết bị di động để giao diện gọn gàng hơn */
+            background-image: none !important;
+        }
+    }
+</style> 

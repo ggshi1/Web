@@ -1,50 +1,3450 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GUANGGAOSHI AGENCY</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-      }
-      /* For custom scrollbar styling */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #111827; /* bg-gray-900 */
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #4b5563; /* bg-gray-600 */
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #6b7280; /* bg-gray-500 */
-      }
-      .highlight-card {
-        border: 2px solid #22d3ee; /* border-cyan-400 */
-        box-shadow: 0 0 30px rgba(34, 211, 238, 0.3);
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.1.0/",
-    "react": "https://esm.sh/react@^19.1.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>ShiADS Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="BM NoLimit , BM Limit 250$ , BM Limit 1500$ , Guanggaoshi, shiads.shop, FB , facebook , meta , ads " />
+    <meta property="og:title" content="GuangGaoShi - 值得信赖的广告帐户 (Trusted Advertising Account)">
+<meta property="og:description" content="BM NoLimit、Limit250、Limit1500 - 全天候支持、明确保修、绝对安全.(BM NoLimit, Limit250, Limit1500 - 24/7 support, clear warranty, absolute security)">
+<meta property="og:image" content="https://shiads.shop/img/banner.jpg">
+<meta property="og:url" content="https://shiads.shop">
+<meta property="og:type" content="website">
+    <meta content="Themesdesign" name="author" />
+    <!-- fevicon -->
+    <link rel="shortcut icon" href="img/faicon.png">
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css" />
+    <!-- animation -->
+    <link rel="stylesheet" href="aos.css" />
+    <!-- slider -->
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
+    <!-- Icon -->
+    <link rel="stylesheet" href="materialdesignicons.min.css" type="text/css" />
+    <!-- css -->
+    <link rel="stylesheet" href="style.min.css" type="text/css" />
+    <!-- colors -->
+    <link href="colors/default.css" rel="stylesheet" type="text/css" id="color-opt" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/all.min.css">
+   <style>
+    .highlightt {
+    color: #007bff;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #f1f8ff;
+    padding: 15px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
   }
+  .highlightt:hover {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.02);
+  }
+    .highlight {
+    color: #007bff; /* Màu xanh dương nổi bật */
+    font-weight: bold; /* Chữ đậm */
+    font-size: 1.1em; /* Tăng kích thước chữ một chút */
 }
-</script>
-<link rel="stylesheet" href="/index.css">
+    .btn-sm {
+    font-size: 1rem; /* Giảm kích thước chữ nếu cần */
+    padding: 1rem 1.5rem; /* Giảm padding nếu cần */
+}
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+        transition: background-color 0.3s ease;
+    }
+    /* USDT */
+  .center-container {
+        display: flex;
+        flex-direction: column; /* Xếp dọc để căn giữa */
+        align-items: center; /* Căn giữa ngang */
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+    }
+    .payment-label {
+        font-size: 1rem; /* Kích thước chữ vừa phải */
+        margin-bottom: 0.5rem; /* Khoảng cách dưới nhãn */
+        color: #6c757d; /* Màu chữ giống text-muted */
+    }
+    .payItem.selectPay {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 12px; /* Padding nhỏ để nút gọn */
+        max-width: 150px; /* Chiều rộng tối đa để nút nhỏ */
+        margin: 0 auto 1rem; /* Căn giữa ngang và khoảng cách dưới */
+        border: 1px solid #007bff; /* Viền nhẹ để giống nút */
+        border-radius: 4px; /* Bo góc nhẹ cho nút ngang */
+        background-color: #f8f9fa; /* Nền nhẹ */
+        cursor: pointer; /* Con trỏ chuột như nút */
+        transition: background-color 0.2s; /* Hiệu ứng hover */
+    }
+    .payItem.selectPay:hover {
+        background-color: #e9ecef; /* Hiệu ứng hover */
+    }
+    .payFunc {
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem; /* Chữ nhỏ */
+    }
+    .payFunc .itemImg {
+        width: 20px; /* Ảnh nhỏ */
+        height: auto;
+        margin-right: 8px; /* Khoảng cách giữa ảnh và chữ */
+    }
+    .amount-input {
+        max-width: 300px; /* Giới hạn chiều rộng trường nhập */
+        margin: 0 auto; /* Căn giữa trường nhập */
+    }
+    /* end usdt */
+    .d-flex.gap-2 {
+    gap: 10px; /* Khoảng cách giữa các button */
+}
+.btn-outline-primary {
+    max-width: 200px; /* Giới hạn chiều rộng button sao chép */
+}
+.btn-primary {
+    max-width: 200px; /* Giới hạn chiều rộng button đóng */
+}
+    .success-gif {
+            display: block;
+            margin: 0 auto 15px;
+            max-width: 100px; /* Giảm kích thước tối đa */
+            max-height: 100px; /* Giảm chiều cao tối đa */
+            height: auto;
+        }
+.progress-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .progress-step {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #6c757d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+        .progress-line {
+            flex-grow: 1;
+            height: 4px;
+            background-color: #6c757d;
+            transition: width 0.3s ease-in-out;
+        }
+        .order-highlight {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #e67e22;
+        }
+        .price-highlight {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #e67e22;
+        }
+  #button-contact-vr {
+        position: fixed;
+        bottom: 100px; /* Cách mép dưới 20px */
+        right: 10px; /* Cách mép phải 20px */
+        z-index: 99999;
+    }
+
+    #gom-all-in-one {
+        display: flex;
+        flex-direction: column; /* Xếp dọc */
+        gap: 10px; /* Khoảng cách giữa các nút */
+    }
+
+    #button-contact-vr .button-contact {
+        position: relative;
+        margin-top: 0; /* Loại bỏ margin-top âm để tránh chồng lấn */
+    }
+
+    #button-contact-vr .button-contact .phone-vr {
+        position: relative;
+        visibility: visible;
+        background-color: transparent;
+        width: 90px;
+        height: 90px;
+        cursor: pointer;
+        z-index: 11;
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translateZ(0);
+        transition: visibility .5s;
+        left: 0;
+        bottom: 0;
+        display: block;
+    }
+
+    .phone-vr-circle-fill {
+        width: 65px;
+        height: 65px;
+        top: 12px;
+        left: 12px;
+        position: absolute;
+        box-shadow: 0 0 0 0 #c31d1d;
+        background-color: rgba(230, 8, 8, 0.7); /* Màu đỏ mặc định */
+        border-radius: 50%;
+        border: 2px solid transparent;
+        -webkit-animation: phone-vr-circle-fill 2.3s infinite ease-in-out;
+        animation: phone-vr-circle-fill 2.3s infinite ease-in-out;
+        transition: all .5s;
+        -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-animation: zoom 1.3s infinite;
+        animation: zoom 1.3s infinite;
+    }
+
+    .phone-vr-img-circle {
+        background-color: #e60808; /* Màu đỏ mặc định */
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        top: 25px;
+        left: 25px;
+        position: absolute;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        -webkit-animation: phone-vr-circle-fill 1s infinite ease-in-out;
+        animation: phone-vr-circle-fill 1s infinite ease-in-out;
+    }
+
+    .phone-vr-img-circle a {
+        display: block;
+        line-height: 37px;
+    }
+
+    .phone-vr-img-circle img {
+        max-height: 25px;
+        max-width: 27px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+
+    /* Tùy chỉnh màu sắc theo từng nút */
+    #contact-vr .phone-vr-circle-fill {
+        background-color: rgba(33, 150, 243, 0.7); /* Màu xanh Skype */
+    }
+    #contact-vr .phone-vr-img-circle {
+        background-color: #2196F3;
+    }
+
+    #fanpage-vr .phone-vr-circle-fill {
+        background-color: rgba(24, 119, 242, 0.7); /* Màu xanh Facebook */
+    }
+    #fanpage-vr .phone-vr-img-circle {
+        background-color: #1877f2;
+    }
+
+    #telegram-vr .phone-vr-circle-fill {
+        background-color: rgba(44, 159, 216, 0.74); /* Màu xanh Telegram */
+    }
+    #telegram-vr .phone-vr-img-circle {
+        background-color: #2c9fd8;
+    }
+
+    #whatsapp-vr .phone-vr-circle-fill {
+        background-color: rgba(35, 217, 72, 0.7); /* Màu xanh lá WhatsApp */
+    }
+    #whatsapp-vr .phone-vr-img-circle {
+        background-color: #1cd741;
+    }
+
+    @-webkit-keyframes phone-vr-circle-fill {
+        0% {
+            -webkit-transform: rotate(0) scale(1) skew(1deg);
+        }
+        10% {
+            -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+        }
+        20% {
+            -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+        }
+        30% {
+            -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+        }
+        40% {
+            -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+        }
+        50% {
+            -webkit-transform: rotate(0) scale(1) skew(1deg);
+        }
+        100% {
+            -webkit-transform: rotate(0) scale(1) skew(1deg);
+        }
+    }
+
+    @-webkit-keyframes zoom {
+        0% {
+            transform: scale(0.9);
+        }
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 15px transparent;
+        }
+        100% {
+            transform: scale(0.9);
+            box-shadow: 0 0 0 0 transparent;
+        }
+    }
+
+    @keyframes zoom {
+        0% {
+            transform: scale(0.9);
+        }
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 15px transparent;
+        }
+        100% {
+            transform: scale(0.9);
+            box-shadow: 0 0 0 0 transparent;
+        }
+    }
+
+    /* Ẩn phone-bar trên mobile */
+    @media (max-width: 736px) {
+        .phone-bar {
+            display: none;
+        }
+    }
+
+    /* Animation cho modal */
+    .orderModal .modal-content {
+        border-radius: 1rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    /* Thanh tiến độ */
+    .progress-step {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+    .progress-line-container {
+        position: absolute;
+        top: 1.25rem;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background-color: #e9ecef;
+        z-index: -1;
+    }
+    .progress-line {
+        height: 100%;
+        background: linear-gradient(to right, #2563eb, #4f46e5);
+        transition: width 0.3s ease;
+    }
+    /* Hình ảnh sản phẩm */
+    .step-content img {
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    /* Input */
+    .form-control {
+        transition: all 0.3s ease;
+    }
+    .form-control:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+    }
+</style>
 </head>
-  <body class="bg-gray-900">
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="71">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-white navbar-custom sticky bg-white" id="navbar">
+        <div class="container">
+            <!-- LOGO -->
+            <div style="font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; display: inline-block;">
+  <span style="color: #0075cf;">GuangGaoShi</span><span style="color: #fec12b;">.Site</span>
+</div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="mdi mdi-menu"></span>
+                <!-- toggle button -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav nav-text mx-auto" id="navbar-navlist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">主页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">简介服务</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">过程</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">我的服务包括</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">服务详情</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">行政人员</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mb-3 mb-lg-0" href="#contact">接触</a>
+                    </li>
+                </ul>
+                <!-- Button trigger modal -->
+                <!-- Nav btn -->
+            </div>
+        </div><!-- End container -->
+    </nav>
+    <!-- End Navbar -->
+    <!-- Start Home -->
+    <section class="section home home-1" id="home">
+        <div class="img">
+            <img src="img/logo-remove.png" alt="">
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="home-heading">
+                        <h1 class="mb-3">GuangGaoShi- <span class="home-text">您可靠的 Facebook</span>
+
+                            <span class="typewrite text-primary d-none d-sm-inline-block" data-period="2000"
+                                data-type='[ "广告账户合作伙伴" ]'>
+                                <span class="wrap"></span> </span>
+                        </h1>
+                    </div>
+                    <p class="">您是否正在寻找高质量、稳定且可靠的 Facebook 广告账户？GuangGaoShi 专注于提供各种类型的账户，以满足个人、企业和代理机构的各种需求： BM (Business Manager) 商务管理平台账户</p>
+                    <div class="home-btn hstack gap-2 flex-column d-sm-block mb-5 mb-sm-0">
+                        <a class="btn btn-primary me-1" href="https://t.me/GGShi1" target="_blank">立即联系我们！</a>
+                        <a class="modal-btn" href="javascript:void(0)" data-bs-toggle="modal"
+                            data-bs-target=".watchvideomodal">
+                            <span class="avatar-sm">
+                                <span class="btn btn-primary avatar-title btn-icon">
+                                    <i class="mdi mdi-play"></i>
+                                </span>
+                            </span>
+                        </a>
+                        <div class="elementor-element elementor-element-96c3c93 rating-style elementor-widget elementor-widget-text-editor" data-id="96c3c93" data-element_type="widget" data-widget_type="text-editor.default">
+                            <div class="elementor-widget-container">
+                                Rating <svg xmlns="http://www.w3.org/2000/svg" width="30" height="24" viewBox="0 3 24 24" style="fill: rgba(255, 213, 65, 1)">
+                                    <path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z">
+                                    </path>
+                                </svg> 4.8 </div>
+                        </div>
+                        <div class="elementor-element elementor-element-d9eb90d elementor-widget elementor-widget-text-editor" data-id="d9eb90d" data-element_type="widget" data-widget_type="text-editor.default">
+                            <div class="elementor-widget-container">
+                                <p>Trusted by Clients from Worldwide</p>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-2cf3770 elementor-widget elementor-widget-image" data-id="2cf3770" data-element_type="widget" data-widget_type="image.default">
+                            <div class="elementor-widget-container">
+                                <img decoding="async" width="257" height="60" src="img/Artboard-7.png" class="attachment-large size-large wp-image-919" alt="">
+                            </div>
+                        </div>
+
+                       <!-- Modal -->
+<div class="modal fade bd-example-modal-lg watchvideomodal" data-keyboard="false" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog modal-lg">
+        <div class="modal-content home-modal p-1">
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <iframe src="https://drive.google.com/file/d/12rQO3dyd8Mws92TNuQEczVoTfiycFdEy/preview" width="85%" height="675" allow="autoplay" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END MODAL -->
+                    </div>
+                </div><!-- end col-->
+               <div class="col-lg-5">
+    <div class="">
+        <img src="img/banner.webp" class="home-img" alt="" style="width: 85%; height: auto;">
+    </div>
+</div>
+                </div><!-- col end -->
+            </div><!-- end row-->
+        </div>
+        <!--end container-->
+    </section>
+    <!-- End Home -->
+    <!-- Client logo start -->
+    <section class="section client-logo">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-12">
+                    <div class="client-list">
+                        <div class="row justify-content-around g-4">
+                            <div class="col-md-2 col-6">
+                                <img class="img-fluid" src="img/meta.png" alt="">
+                            </div><!-- End col-->
+                            <div class="col-md-2 col-6">
+                                <img class="img-fluid" src="img/Facebook.png" alt="">
+                            </div><!-- End col-->                                               
+                            <div class="col-md-2 col-6">
+                                <img class="img-fluid" src="img/Instagram.png" alt="">
+                            </div><!-- End col-->
+                            <div class="col-md-2 col-6">
+                                <img class="img-fluid" src="img/Youtube.png" alt="">
+                            </div><!-- End col-->
+                        </div><!-- End row-->
+                    </div>
+                </div><!-- end col -->
+            </div>
+        </div>
+    </section>
+    <!-- Client logo end -->
+    <!-- start services
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-12">
+                    <div class="text-center mb-5">
+                        <h3 class="heading">Our <span class="text-primary">Services</span></h3>
+                        <p>Nam egestas mi sit amet orci dignissim tempor Integer tincidunt nunc mauris in egestas nibh.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="box">
+                                <div class="flex-shrink-0 my-3">
+                                    <div class="avatar-sm align-items-center">
+                                        <div class="avatar-title">
+                                            <i class="mdi mdi-biohazard"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4>Web Design</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+                                    quae?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="box">
+                                <div class="flex-shrink-0 my-3">
+                                    <div class="avatar-sm align-items-center">
+                                        <div class="avatar-title">
+                                            <i class="mdi mdi-desktop-mac"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4>Web Development</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+                                    quae?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="box">
+                                <div class="flex-shrink-0 my-3">
+                                    <div class="avatar-sm align-items-center">
+                                        <div class="avatar-title">
+                                            <i class="mdi mdi-shield-account-outline"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4>Web Security </h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+                                    quae?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="box">
+                                <div class="flex-shrink-0 my-3">
+                                    <div class="avatar-sm align-items-center">
+                                        <div class="avatar-title">
+                                            <i class="mdi mdi-email-open-multiple-outline"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4>Mail</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+                                    quae?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   end services -->
+    <!-- start about -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-12">
+                    <div class="text-center mb-5">
+                        <h3 class="heading"><span class="text-primary">服务介绍</span></h3>
+                        <p>我们提供高品质的 BM、广泛的选择、全天候支持和明确的保修承诺——帮助您有效地、绝对放心地进行广告宣传。</p>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <ul class="nav nav-tabs nav-tabs-custom nav-justified justify-content-center faq-tab-box" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a href="#pills-genarel" class="nav-link" id="pills-genarel-tab" data-bs-toggle="pill" role="tab" 
+                            aria-controls="pills-genarel" aria-selected="true">
+                                <h5 class="mb-0">采购流程</h5>
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a href="#pills-privacy_policy" class="nav-link active" id="pills-privacy_policy-tab" data-bs-toggle="pill"
+                             role="tab" aria-controls="pills-privacy_policy" aria-selected="false">
+                                <h5 class="mb-0">为什么选择我们?</h5>
+                            </a>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <a href="#pills-pricing_plan" class="nav-link" id="pills-teachers-tab" data-bs-toggle="pill"
+                             role="tab" aria-controls="pills-pricing_plan" aria-selected="false">
+                                <h5 class="mb-0">我们的承诺</h5>
+                            </a>
+                          </li>
+                      </ul>
+                </div>
+                <div class="col-lg-12">
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade" id="pills-genarel" role="tabpanel" aria-labelledby="pills-genarel-tab">
+                            <div class="row justify-content-between align-items-center">
+                                 <div class="col-lg-5">
+                                    <div class="about-img">
+                                        <img src="img/logo_nho.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h4 class="about-heading">采购流程</h4>
+                                    <p class="text-muted">步骤1：选择合适的账户类型</p>
+                                        <p class="text-muted">第二步：填写信息并付款 </p>
+                                        <p class="text-muted">步骤3：5分钟至15分钟内收到BM </p>
+                                        <p class="text-muted">步骤4：用户手册和售后支持</p>
+                                    
+                                            <div>
+                                                <a class="text-primary" href="https://t.me/GGShi1" target="_blank">联系我们</a>
+                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade active show" id="pills-privacy_policy" role="tabpanel" aria-labelledby="pills-privacy_policy-tab">
+                            <div class="row justify-content-between align-items-center">
+                                <div class="col-lg-5">
+                                    <div class="about-img">
+                                        <img src="img/logo_nho.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h4 class="about-heading">为什么选择我们？</h4>
+                                    <p class="text-muted"><img src="img/flash.7e7b77a2.png" alt="Logo" style="width: 20px; height: auto; margin-right: 10px;">我们提供最先进、最稳定的企业Facebook广告账户和资产, 让你的广告持续稳定运行。</p>
+                                        <p class="text-muted"><img src="img/TopUp.f275c9dc.png" alt="Logo" style="width: 20px; height: auto; margin-right: 10px;">您可以通过我们的在线充值系统轻松充值，支持USDT，Wise和银行卡以及微信，支付宝。</p>
+                                        <p class="text-muted"><img src="img/247Support.1294e523.png" alt="Logo" style="width: 20px; height: auto; margin-right: 10px;">您可以随时通过商店右下角的 Telegram 或聊天频道联系我们的支持，我们提供 24 小时售后支持。</p>
+                                        <p class="text-muted"><img src="img/Check.b9ddee85.png" alt="Logo" style="width: 20px; height: auto; margin-right: 10px;">针对企业级广告账户，我们提供7天质保。</p>
+                                            <div>
+                                                <a class="text-primary" href="https://t.me/GGShi1" target="_blank">联系我们</a>
+                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-pricing_plan" role="tabpanel" aria-labelledby="pills-tab">
+                            <div class="row justify-content-between align-items-center">
+                                <div class="col-lg-5">
+                                    <div class="about-img">
+                                        <img src="img/logo_nho.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h4 class="about-heading">我们的承诺</h4>
+                                    <p class="text-muted">如果 BM 在保修期内损坏，请退货</p>
+                                        <p class="text-muted">如有需要，可咨询广告策略</p>
+                                        <p class="text-muted">客户信息绝对保密</p>
+                                            <div>
+                                                <a class="text-primary" href="https://t.me/GGShi1" target="_blank">联系我们</a>
+                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end about -->
+       <!--start pricing-->
+<section class="section pricing" id="pricing">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="text-center mb-5">
+                    <h3 class="heading mb-3"><span class="text-primary">我们的服务</span></h3>
+                    <p class="text-muted mb-0 highlightt">您想要的账户类型有很多种，以上只是几个例子，如果您想了解更多详情，请通过电报联系我们，会有顾问为您服务。</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!-- Card: BM Invitation (NoLimit) -->
+            <div class="col-lg-6 col-md-6 mt-4">
+                <div class="pricing-box card text-center border-0">
+                    <div class="mb-3">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fab-facebook-square" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" style="width: 50px; height: 50px;">
+                            <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path>
+                        </svg>
+                        <h6 class="text-uppercase mb-0">BM Invitation (NoLimit)</h6>
+                        <h1 class="text-primary mb-0 fw-bold" style="font-size: 3rem;">50$</h1>
+                    </div>
+                    <ul class="pricing-list list-unstyled mt-2 mb-0">
+                        <li class="pricing-item"><span class="text-success">➤ 旧帐户（2021 年至 2023 年）</span></li>
+                        <li class="pricing-item"><span class="text-success">➤ 通过您的 BM 实现完全控制和所有权</span></li>
+                        <li class="pricing-item"><span class="text-success">➤ 已验证公司，Meta Business 总监（反禁令助推者）</span></li>
+                        <li class="pricing-item"><span class="text-success">➤ 广告帐户已准备好立即启动广告活动</span></li>
+                        <li class="pricing-item"><span class="text-success">➤ 您拥有完全的访问权和所有权。</span></li>
+                        <li class="pricing-item"><span class="text-success">➤ 我们的 BM 已预先验证且干净 - 更改您的时区、货币和国家/地区</span></li>
+                        <li class="pricing-item"><span class="text-success">➤ 更改时区/货币/国家（分享 BM ID）</span></li>
+                    </ul>
+                    <div class="mt-4 pt-3">
+                        <button onclick="showOrderModalNoLimit()" class="btn btn-pricing w-100">立即购买！</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card: BM Invitation ($250 Limit) -->
+            <div class="col-lg-6 col-md-6 mt-4">
+                <div class="pricing-box card text-center border-0">
+                    <div class="mb-3">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fab-facebook-square" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" style="width: 50px; height: 50px;">
+                            <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path>
+                        </svg>
+                        <h6 class="text-uppercase mb-0">BM Invitation ($250 Limit)</h6>
+                        <h1 class="text-primary mb-0 fw-bold" style="font-size: 3rem;">40$</h1>
+                    </div>
+                    <ul class="pricing-list list-unstyled mt-2 mb-0">
+                        <li class="pricing-item"><span class="text-success">➤ 没有 Facebook 帐户，只有 BM</span></li>
+                        <li class="pricing-item"><span class="text-success">➤ 简洁的 Meta Business Manager</span></li>
+                        <li class="pricing-item"><span class="text-success">➤ 可立即启动广告活动的广告帐户（每个帐户的广告支出为 250 美元）</span></li>
+                        <li class="pricing-item"><span class="text-success">➤ 之前被禁止但已恢复（强化反禁令）</span></li>
+                        <li class="pricing-item"><span class="text-success">➤ 完全控制权和所有权</span></li>
+                        <li class="pricing-item"><span class="text-success">➤ 24小时内送达</span></li>
+                        <li class="pricing-item"><span class="text-success">➤ 更改时区/货币/国家（分享 BM ID）</span></li>
+                    </ul>
+                    <div class="mt-4 pt-3">
+                        <button onclick="showOrderModalLimit250()" class="btn btn-pricing w-100">立即购买！</button>
+                    </div>
+                </div>
+            </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+    </section>
+           <!--start pricing-->
+    <section class="section pricing" id="pricing">
+        <div class="container">
+            <div class="row  justify-content-center">
+                <div class="col-lg-12">
+                    <div class="text-center mb-5">
+                        <h3 class="heading mb-3"><span class="text-primary">个人账户(Personal account) </span></h3>
+                        <p class="text-muted mb-0 highlightt">您想要的账户类型有很多种，以上只是几个例子，如果您想了解更多详情，请通过电报联系我们，会有顾问为您服务。</p>
+                    </div>
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 mt-4">
+    <div class="pricing-box card text-center overflow-hidden">
+        <div class="ribbon">PERSONAL</div>
+        <div class="mb-3">
+            <svg aria-hidden="true" class="e-font-icon-svg e-fab-facebook-square" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" style="width: 50px; height: 50px;">
+                <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path>
+            </svg>
+            <h6 class="text-uppercase mb-0">Personal account 250$ Limit</h6>
+            <h1 class="text-primary mb-0 fw-bold" style="font-size: 3rem;">30$</h1>
+        </div>
+        <ul class="pricing-list list-unstyled mt-2 mb-0">
+            <li class="pricing-item"><span class="text-success">➤ 简洁的 Meta Business Manager (Clean Meta Business Manager)</span></li>
+            <li class="pricing-item"><span class="text-success">➤ 广告帐户可立即启动广告活动 (Ad account ready to launch campaigns)</span></li>
+            <li class="pricing-item"><span class="text-success">➤ 包括邮件访问 (Includes email access)</span></li>
+            <li class="pricing-item"><span class="text-success">➤ 完全控制权和所有权 (Full control and ownership)</span></li>
+            <li class="pricing-item"><span class="text-success">➤ 24小时内送达 (Delivered within 24 hours)</span></li>
+        </ul>
+        <div class="mt-4 pt-3">
+            <button onclick="showOrderModalPersonalLimit250()" class="btn btn-pricing w-100">立即购买！</button>
+        </div>
+    </div>
+</div>
+                <!--end col-->
+                 <div class="col-lg-4 col-md-6 mt-4">
+                    <div class="pricing-box pricing-active card text-center overflow-hidden">
+                        <div class="ribbon">PERSONAL</div>
+                        <div class="mb-3">
+                            <svg aria-hidden="true" class="e-font-icon-svg e-fab-facebook-square" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" style="width: 50px; height: 50px;">
+                                <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path>
+                            </svg>
+                            <h6 class="text-uppercase mb-0">Personal account 1500$ Limit</h6>
+                            <h1 class="text-primary mb-0 fw-bold" style="font-size: 3rem;">50$</h1>
+                        </div>
+                        <ul class="pricing-list list-unstyled mt-2 mb-0">
+                            <li class="pricing-item"><span class="text-success">➤ 简洁的 Meta Business Manager</span></li>
+                            <li class="pricing-item"><span class="text-success">➤ 广告帐户可立即启动广告活动</span></li>
+                            <li class="pricing-item"><span class="text-success">➤ 包括邮件访问 </span></li>
+                            <li class="pricing-item"><span class="text-success">➤ 完全控制权和所有权</span></li>
+                            <li class="pricing-item"><span class="text-success">➤ 24小时内送达</span></li>
+                        
+                            
+                        </ul>
+                        <div class="mt-4 pt-3">
+                            <button onclick="showOrderModalLimit1500()" class="btn btn-pricing w-100">立即购买！</button>
+                        </div>
+                    </div>
+                </div>
+                <!--end col-->
+               <div class="col-lg-4 col-md-6 mt-4">
+    <div class="pricing-box card text-center overflow-hidden">
+        <div class="ribbon">PERSONAL</div>
+        <div class="mb-3">
+            <svg aria-hidden="true" class="e-font-icon-svg e-fab-facebook-square" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" style="width: 50px; height: 50px;">
+                <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path>
+            </svg>
+            <h6 class="text-uppercase mb-0">Personal account NoLimit</h6>
+            <h1 class="text-primary mb-0 fw-bold" style="font-size: 3rem;">45$</h1>
+        </div>
+        <ul class="pricing-list list-unstyled mt-2 mb-0">
+            <li class="pricing-item"><span class="text-success">➤ 简洁的 Meta Business Manager (Clean Meta Business Manager)</span></li>
+            <li class="pricing-item"><span class="text-success">➤ 旧帐户（2021 年至 2023 年） (Old account 2021-2023)</span></li>
+            <li class="pricing-item"><span class="text-success">➤ 包括邮件访问 (Includes email access)</span></li>
+            <li class="pricing-item"><span class="text-success">➤ 完全控制权和所有权 (Full control and ownership)</span></li>
+            <li class="pricing-item"><span class="text-success">➤ 24小时内送达 (Delivered within 24 hours)</span></li>
+        </ul>
+        <div class="mt-4 pt-3">
+            <button onclick="showOrderModalPersonalNoLimit()" class="btn btn-pricing w-100">立即购买！</button>
+        </div>
+    </div>
+</div>
+                
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+    </section>
+    <!--end pricing-->
+    <!-- start features -->
+    <section class="section features" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center mb-5">
+                        <h3 class="heading"><span class="text-primary">过程</span></h3>
+                        <p class="text-muted mb-0">我们的服务涵盖您广告所需的一切：VPS 或 Antidetect 浏览器配置文件（干净的代理）用于维护广告账户，高限额广告账户用于投放广告，广告账户可使用信用卡，如有需要，我们还提供页面。您只需关注广告效果即可。</p>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row align-items-center justify-content-center g-3">
+                        <div class="col-lg-3">
+                            <div class="row mx-auto g-3">
+                                <div class="col-lg-12">
+                                    <div class="card features-box border-0">
+                                        <div class="card-body features-body">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0">
+                                                    <div class="align-items-center">
+                                                        <div class="features-icon">
+                                                            1
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 align-self-center ms-3">
+                                                    <h6 class="mb-0">检查您的广告帐户</h6>
+                                                    <span class="text-muted">我们将审核您的广告账户，确保质量并满足您的需求，从而节省您的时间和金钱。 保障您的财务状况</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="card features-box border-0">
+                                        <div class="card-body features-body">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0">
+                                                    <div class="align-items-center">
+                                                        <div class="features-icon">
+                                                            2
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 align-self-center ms-3">
+                                                    <h6 class="mb-0">支付</h6>
+                                                    <span class="text-muted">如果您对我们的广告帐户没有任何问题，我们将按约定预付您的预算和所有服务费用</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="card features-box border-0">
+                                        <div class="card-body features-body">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0">
+                                                    <div class="align-items-center">
+                                                        <div class="features-icon">
+                                                            3
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 align-self-center ms-3">
+                                                    <h6 class="mb-0">交出</h6>
+                                                    <span class="text-muted">342 / 5.000 预算到位且账户没有问题后，我们将把广告账户移交给您，以启动广告活动。</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card features-box border-0">
+                                <div class="card-body features-body p-0">
+                                    <img src="img/logo_nho.png" class="img-fluid features-img" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="row mx-auto g-3">
+                                <div class="col-lg-12">
+                                    <div class="card features-box border-0">
+                                        <div class="card-body features-body">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0">
+                                                    <div class="align-items-center">
+                                                        <div class="features-icon">
+                                                            4
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 align-self-center ms-3">
+                                                    <h6 class="mb-0">笔记</h6>
+                                                    <span class="text-muted">我们将先审核所有活动，以节省双方时间。您还可以先查看我们的账户，以防有人冒充我们进行诈骗。</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="card features-box border-0">
+                                        <div class="card-body features-body">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0">
+                                                    <div class="align-items-center">
+                                                        <div class="features-icon">
+                                                            5
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 align-self-center ms-3">
+                                                    <h6 class="mb-0">笔记</h6>
+                                                    <span class="text-muted">我们将先审核所有活动，以节省双方时间。您还可以先查看我们的账户，以防有人冒充我们进行诈骗。</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="card features-box border-0">
+                                        <div class="card-body features-body">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0">
+                                                    <div class="align-items-center">
+                                                        <div class="features-icon">
+                                                            6
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 align-self-center ms-3">
+                                                    <h6 class="mb-0">笔记</h6>
+                                                    <span class="text-muted">我们将先审核所有活动，以节省双方时间。您还可以先查看我们的账户，以防有人冒充我们进行诈骗。</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end features -->
+      <!--start testimonials-->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-12">
+                    <div class="text-center mb-5">
+                        <h3 class="heading"><span class="text-primary">服务详情</span></h3>
+                        <p>请观看视频了解我们服务的详情。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--end row-->
+         <!--video-->   
+   <section class="section video-section" id="video">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-12">
+                <div class="video-container">
+                    <iframe src="https://drive.google.com/file/d/12rQO3dyd8Mws92TNuQEczVoTfiycFdEy/preview" width="100%" height="675" allow="autoplay" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end video-->
+    <!-- start team -->
+    <section class="section team" id="team">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="text-center mb-5">
+                        <h3 class="heading mb-3"><span class="text-primary">行政人员</span></h3>
+                        <p class="text-muted mb-0">我们的产品运营和保修管理员团队</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-member">
+                        <div class="team-img">
+                            <a href="https://t.me/GGShi1" target="_blank"></a>
+                            <img src="img/tele_admin.png" alt="Telegram Avatar" class="img-fluid"onclick="window.open('https://t.me/GGShi1', '_blank')">
+                        </div>
+                    </div>
+                    <div class="team-title">
+                        <h5>Support GgShi</h5>
+                        <span>行政人员</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-member">
+                        <div class="team-img">
+                            <img src="img/tele_sp1.png" alt="Telegram Avatar" class="img-fluid"onclick="window.open('https://t.me/BossGGshi', '_blank')">
+                        </div>
+                    </div>
+                    <div class="team-title">
+                        <h5>GuangGao Shi 🐷</h5>
+                        <span>客户支持</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-member">
+                        <div class="team-img">
+                            <img src="img/tele_chanel.png" alt="Telegram Avatar" class="img-fluid"onclick="window.open('https://t.me/GuangGaoShi', '_blank')">
+                        </div>
+                    </div>
+                    <div class="team-title">
+                        <h5>Business Instagram - FB - Pixel ♻️</h5>
+                        <span>聊天频道</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end team -->
+<section class="section contact" id="contact">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="text-center mb-5">
+                    <h3 class="heading mb-3"><span class="text-primary">有疑问？</span> 查看常见问题解答</h3>
+                    <p class="text-muted mb-0">仍有未解答的问题并需要联系吗？</p>
+                </div>
+            </div>
+            <!--end col-->
+        </div>
+        <div class="row justify-content-around g-4">
+            <div class="col-lg-6">
+                <div class="contact-details">
+                    <div class="position-relative mb-3">
+                        <div class="elementor-icon-box-wrapper">
+                           
+                            <div class="elementor-icon-box-content">
+                                <h3 class="elementor-icon-box-title">
+                                    <a href="https://t.me/GGShi1">还有其他问题吗？</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="position-relative mb-3">
+                        <ul class="elementor-icon-list-items">
+                            <li class="elementor-icon-list-item">
+                                <a href="https://t.me/GGShi1">
+                                    <span class="elementor-icon-list-icon">
+                                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-paper-plane" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="50" height="50">
+                                            <path d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="elementor-icon-list-text">与我们聊天 <i class="bx bx-right-arrow-alt fs-xl ms-2"></i></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--end col-->
+            <div class="col-lg-6">
+                <div class="contact-details">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    您的帐户可以运行黑帽和灰帽活动吗？
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>是的，您的帐户可以用于黑帽和灰帽活动。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    你们提供哪些类型的账户？
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>我们提供所有账户类型：具有消费历史的个人账户、BM 账户和代理账户。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    账户被锁定后会发生什么？该账户中的资金可以转移到新账户吗？
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>当账户被锁定时，我们的工作人员将完全免费为您提供一个新账户。</p>
+                                    <p>旧帐户中的余额将转移到新帐户。此操作适用于个人资料帐户和主页帐户。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    您的账户限额是多少？
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>我们的账户每天的消费限额为 1500 美元、250 美元和无限额。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    我如何使用您的帐户？
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>我们在 VPS、RDP 或 Antidetect 浏览器中设置了所有内容和广告帐户。</p>
+                                    <p>您将被授予访问这些软件的权限来控制和使用我们的帐户。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    您使用哪种付款方式？
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>我们使用 USDT、BTC、Payoneer 进行付款。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSeven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    如何为您的账户充值？
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>您确认我们的账户后再汇款给我们，我们的工作人员会为您激活账户，供您使用。</p>
+                                    <p>当您的押金即将用完时，我们的工作人员将通知您存入更多金额，以确保您的活动不会中断。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end col-->
+        </div>
+        <!--end row-->
+    </div>
+    <!--end container-->
+</section>
+<section>
+<div id="button-contact-vr" class="">
+        <div id="gom-all-in-one"><!-- v3 -->
+
+
+
+            <!-- fanpage
+            <div id="fanpage-vr" class="button-contact">
+                <div class="phone-vr">
+                    <div class="phone-vr-circle-fill"></div>
+                    <div class="phone-vr-img-circle">
+                        <a target="_blank" href="https://www.facebook.com/profile.php?id=61565052999508">
+                            <img alt="Fanpage" src="img/Facebook.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            end fanpage -->
+
+
+
+
+            <!-- telegram -->
+            <div id="telegram-vr" class="button-contact">
+                <div class="phone-vr">
+                    <div class="phone-vr-circle-fill"></div>
+                    <div class="phone-vr-img-circle">
+                        <a target="_blank" href="https://t.me/BossGGshi">
+                            <img alt="telegram" src="img/telegram.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- end telegam -->
+
+
+
+
+
+        </div><!-- end v3 class gom-all-in-one -->
+
+
+    </div>
+</section>
+<!-- end contact -->
+
+<style>
+.contact-details .elementor-icon-box-icon svg,
+.contact-details .elementor-icon-list-icon svg {
+    width: 24px !important;
+    height: 24px !important;
+}
+</style>
+ <!-- start footer -->
+<footer class="section bg-footer">
+    <div class="container">
+        <div class="text-center mb-5">
+            <img src="img/qrtele.jpg" class="img-fluid" alt="Logo" style="max-width: 200px;">
+        </div>
+        <div class="row justify-content-around g-4 align-items-center">
+            <div class="col-lg-6">
+                <div class="d-flex align-items-center mb-4">
+                    <img src="img/Telegram.png" class="img-fluid me-3" alt="Hotline" width="100" height="100">
+                    <h3 class="mb-0">立即联系我们以获取特别优惠和一般支持。</h3>
+                </div>
+                <div class="text-center">
+                    <a href="https://t.me/GGShi1" class="btn btn-primary">
+                        <i class="mdi mdi-comment-text-outline me-2"></i>接触
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="contact-details">
+                    <div class="card mb-3" style="border: 1px solid #dc3545; border-radius: 5px;">
+                        <div class="card-body text-center">
+                            <a href="https://t.me/GuangGaoShi" target="_blank" class="text-decoration-none">
+                                <i class="mdi mdi-telegram align-middle text-muted fs-20 me-2"></i>
+                                <span class="fw-medium">电报频道</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="border: 1px solid #dc3545; border-radius: 5px;">
+                        <div class="card-body text-center">
+                            <a href="https://t.me/BossGGshi" target="_blank" class="text-decoration-none">
+                                <i class="mdi mdi-telegram align-middle text-muted fs-20 me-2"></i>
+                                <span class="fw-medium">立即联系购买</span>
+                                <svg height="23" viewBox="0 2 24 24" width="25" xmlns="http://www.w3.org/2000/svg" class="ms-2">
+                                    <g id="Layer_2" data-name="Layer 2">
+                                        <path d="m19.36 9v-2.36a2 2 0 0 0 -2-2h-2.31l-1.64-1.64a2 2 0 0 0 -2.82 0l-1.59 1.64h-2.36a2 2 0 0 0 -2 2v2.36l-1.64 1.59a2 2 0 0 0 0 2.82l1.64 1.64v2.31a2 2 0 0 0 2 2h2.36l1.59 1.64a2 2 0 0 0 2.82 0l1.64-1.64h2.31a2 2 0 0 0 2-2v-2.31l1.64-1.64a2 2 0 0 0 0-2.82z" fill="#ED2027"></path>
+                                        <path d="m11.25 14.5a1 1 0 0 1 -.71-.29l-1.54-1.5a1 1 0 0 1 1.42-1.42l.79.8 2.29-2.3a1 1 0 0 1 1.5 1.42l-3 3a1 1 0 0 1 -.75.29z" fill="#fff"></path>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="border: 1px solid #dc3545; border-radius: 5px;">
+                        <div class="card-body text-center">
+                            <a href="https://t.me/GGShi1" target="_blank" class="text-decoration-none">
+                                <i class="mdi mdi-telegram align-middle text-muted fs-20 me-2"></i>
+                                <span class="fw-medium">管理员收件箱</span>
+                                <svg height="23" viewBox="0 2 24 24" width="25" xmlns="http://www.w3.org/2000/svg" class="ms-2">
+                                    <g id="Layer_2" data-name="Layer 2">
+                                        <path d="m19.36 9v-2.36a2 2 0 0 0 -2-2h-2.31l-1.64-1.64a2 2 0 0 0 -2.82 0l-1.59 1.64h-2.36a2 2 0 0 0 -2 2v2.36l-1.64 1.59a2 2 0 0 0 0 2.82l1.64 1.64v2.31a2 2 0 0 0 2 2h2.36l1.59 1.64a2 2 0 0 0 2.82 0l1.64-1.64h2.31a2 2 0 0 0 2-2v-2.31l1.64-1.64a2 2 0 0 0 0-2.82z" fill="#ED2027"></path>
+                                        <path d="m11.25 14.5a1 1 0 0 1 -.71-.29l-1.54-1.5a1 1 0 0 1 1.42-1.42l.79.8 2.29-2.3a1 1 0 0 1 1.5 1.42l-3 3a1 1 0 0 1 -.75.29z" fill="#fff"></path>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="card mb-3" style="border: 1px solid #dc3545; border-radius: 5px;">
+                        <div class="card-body text-center">
+                            <a href="https://t.me/s/GuangGaoShi" target="_blank" class="text-decoration-none">
+                                <i class="mdi mdi-youtube align-middle text-muted fs-20 me-2"></i>
+                                <span class="fw-medium">YouTube</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- end footer -->
+    <!-- FOOTER-ALT -->
+    <div class="footer-alt pt-4 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center">
+                        <p class="mb-0 fs-15 text-white">
+                            © shiads.shop • 保留所有权利。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END FOOTER-ALT -->
+<!-- MODAL -->
+    <div class="modal fade orderModal" id="orderModalNoLimit" tabindex="-1" aria-labelledby="orderModalNoLimitLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content home-modal p-4">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="orderModalNoLimitLabel">订购产品</h5>
+                    <button type="button" class="btn-close btn-close-dark" onclick="closeOrderModalNoLimit()" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Thanh tiến trình -->
+                    <div class="d-flex justify-content-between mb-5 position-relative">
+                        <div class="text-center flex-1">
+                            <div class="progress-step bg-primary text-white" id="step1-nolimit">1</div>
+                            <p class="mt-2 small">查看产品信息</p>
+                        </div>
+                        <div class="text-center flex-1">
+                            <div class="progress-step bg-secondary text-white" id="step2-nolimit">2</div>
+                            <p class="mt-2 small">输入您的信息</p>
+                        </div>
+                        <div class="text-center flex-1">
+                            <div class="progress-step bg-secondary text-white" id="step3-nolimit">3</div>
+                            <p class="mt-2 small">下单成功</p>
+                        </div>
+                        <div class="progress-line-container">
+                            <div id="progress-line-nolimit" class="progress-line" style="width: 0%"></div>
+                        </div>
+                    </div>
+<!-- Bước 1: Thông tin sản phẩm -->
+<div id="step1-content-nolimit" class="step-content">
+    <h2 class="mb-4">产品信息(Product information)</h2>
+    <!-- Carousel chứa 5 hình ảnh sản phẩm -->
+    <div id="productCarouselNoLimit" class="carousel slide mb-3" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/nolimit.jpg" class="d-block w-100 img-fluid" alt="No Limit - 1">
+            </div>
+            <div class="carousel-item">
+                <img src="img/nolimi1.jpg" class="d-block w-100 img-fluid" alt="No Limit - 2">
+            </div>
+            <div class="carousel-item">
+                <img src="img/nolimi2.jpg" class="d-block w-100 img-fluid" alt="No Limit - 3">
+            </div>
+            <div class="carousel-item">
+                <img src="img/nolimit3.jpg" class="d-block w-100 img-fluid" alt="No Limit - 4">
+            </div>
+            <div class="carousel-item">
+                <img src="img/nolimit5.png" class="d-block w-100 img-fluid" alt="No Limit - 5">
+            </div>
+        </div>
+        <!-- Nút điều hướng carousel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarouselNoLimit" data-bs-slide="prev" style="background-color: rgba(0, 0, 0, 0.7); width: 40px; height: 40px; border-radius: 50%; top: 50%; transform: translateY(-50%);">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarouselNoLimit" data-bs-slide="next" style="background-color: rgba(0, 0, 0, 0.7); width: 40px; height: 40px; border-radius: 50%; top: 50%; transform: translateY(-50%);">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <h4 id="productNameNoLimit">No Limit</h4>
+    <p id="productPriceNoLimit" class="price-highlight">Giá: 60 USD</p>
+    <p id="productDescriptionNoLimit">Mô tả: Tài khoản quảng cáo chất lượng cao, phù hợp với mọi nhu cầu quảng cáo.</p>
+    <button onclick="nextStepNoLimit(2)" class="btn btn-primary w-100">Continue</button>
+</div>
+                                       <!-- Bước 2: Thông tin khách hàng -->
+                    <div id="step2-content-nolimit" class="step-content d-none">
+                        <h2 class="mb-4">输入您的信息(Enter your information)</h2>
+                        <div class="mb-3">
+                            <label class="form-label">数量(Quantity)<span class="text-danger">*</span></label>
+                            <select id="quantitySelectNoLimit" class="form-select quantity-select" onchange="toggleCustomQuantity('NoLimit'); updatePriceNoLimit()">
+                                <option value="1">1</option>
+                                <option value="5">5</option>
+                                <option value="10">10 (5% off)</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="50">50 (15% off)</option>
+                                <option value="100">100</option>
+                            </select>
+                            <div id="quantityCustomNoLimit" class="quantity-custom">
+                                <input type="number" id="quantityCustomInputNoLimit" class="form-control" min="1" value="1" oninput="updatePriceNoLimit()">
+                            </div>
+                            <p class="text-muted mt-2">
+                                折扣(Discoun): <span id="discountPercentNoLimit">0%</span> |
+                            价格(Price): $<span id="unitPriceNoLimit" class="price-highlight">60</span> / 产品(product) |
+                                全部的(Total): $<span id="totalPriceNoLimit" class="price-highlight">60</span>
+                            </p>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">你的名字(Your name) <span class="text-danger">*</span></label>
+                            <input type="text" id="customerNameNoLimit" class="form-control required" placeholder="输入#user_TelegramID、 或标识符(Enter #user_TelegramID,)" required>
+                            <div class="invalid-feedback">请输入#user_Telegram, 或标识符(Please enter #user_TelegramID)</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">BM ID（最多 2 个，以逗号分隔）- BM ID (max 2, separated by commas) <span class="text-danger">*</span></label>
+                            <input type="text" id="bmIdNoLimit" class="form-control required" placeholder="输入您的 BM ID，以逗号分隔，最多 2 个(Enter your BM ID, separated by commas, maximum 2)" required>
+                            <div class="invalid-feedback">请输入至少 1 个 BM ID。(Please enter at least 1 BM ID.)</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">用于接收通知的电子邮件(Email to receive notifications) <span class="text-danger">*</span></label>
+                            <input type="email" id="emailNoLimit" class="form-control required" placeholder="输入电子邮件(Enter email)" required>
+                            <div class="invalid-feedback">请输入有效的电子邮件。(Please enter a valid email.)</div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">附加信息(Additional information)</label>
+                            <textarea id="additionalInfoNoLimit" class="form-control" rows="4" placeholder="Additional notes (if any)"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-between gap-3">
+                            <button onclick="prevStepNoLimit(1)" class="btn btn-secondary flex-1">Back</button>
+                            <button onclick="validateAndSubmitNoLimit()" class="btn btn-primary flex-1">Continue</button>
+                        </div>
+                    </div>
+                   <!-- Bước 3: Đặt hàng thành công -->
+                    <div id="step3-content-nolimit" class="step-content d-none">
+                        <img src="img/success.gif" alt="Success GIF" class="success-gif">
+                        <h2 class="text-center mb-4 text-success">下单成功！</h2>
+                        <p class="text-center text-muted mb-3">感谢您的订购。我们将尽快通过电子邮件与您联系以确认。</p>
+                        <p class="text-center text-muted mb-3">Thank you for your order. We will contact you soon via email to confirm.</p>
+                            <p class="text-center">
+  订购代码(Order code) : 
+  <span id="orderCodeNoLimit" class="order-highlight"></span> 
+  <span class="text-danger">(Please copy this order code.)</span>
+</p
+                       <!-- Container chứa nhãn, nút USDT, trường nhập amount, và nút thanh toán -->
+    <div class="center-container">
+        <p class="payment-label">付款方式(Payment method)</p>
+        <div class="payItem selectPay text-center mb-3">
+            <div class="payFunc">
+                <img src="img/usdt.png" alt="USDT" class="itemImg">
+                <div>USDT</div>
+            </div>
+        </div>
+        <!-- Trường nhập amount -->
+        <div class="mb-4 amount-input">
+    <label class="form-label">数量 (Amount)</label>
+    <input id="amountNoLimit" class="form-control" type="number" placeholder="输入USDT金额(Enter USDT amount)">
+</div>
+       <!-- Nút tiến hành thanh toán -->
+<button type="button" class="btn btn-primary mb-3 btn-sm" onclick="showQRPaymentModal('NoLimit')">继续付款(Proceed to payment)</button>
+</div>
+<div class="d-flex justify-content-center gap-2">
+    <button onclick="copyOrderCode('NoLimit')" class="btn btn-outline-primary btn-sm">复制订单代码(Copy order code)</button>
+    <button onclick="closeOrderModalNoLimit()" class="btn btn-primary btn-sm">Đóng</button>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Limit 250$ -->
+    <div class="modal fade orderModal" id="orderModalLimit250" tabindex="-1" aria-labelledby="orderModalLimit250Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content home-modal p-4">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="orderModalLimit250Label">订购产品</h5>
+                    <button type="button" class="btn-close btn-close-dark" onclick="closeOrderModalLimit250()" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Thanh tiến trình -->
+                    <div class="d-flex justify-content-between mb-5 position-relative">
+                        <div class="text-center flex-1">
+                            <div class="progress-step bg-primary text-white" id="step1-limit250">1</div>
+                            <p class="mt-2 small">查看产品信息</p>
+                        </div>
+                        <div class="text-center flex-1">
+                            <div class="progress-step bg-secondary text-white" id="step2-limit250">2</div>
+                            <p class="mt-2 small">输入您的信息</p>
+                        </div>
+                        <div class="text-center flex-1">
+                            <div class="progress-step bg-secondary text-white" id="step3-limit250">3</div>
+                            <p class="mt-2 small">下单成功</p>
+                        </div>
+                        <div class="progress-line-container">
+                            <div id="progress-line-limit250" class="progress-line" style="width: 0%"></div>
+                        </div>
+                    </div>
+<!-- Bước 1: Thông tin sản phẩm -->
+<div id="step1-content-limit250" class="step-content">
+    <h2 class="mb-4">产品信息(Product information)</h2>
+    <!-- Carousel chứa 5 hình ảnh sản phẩm -->
+    <div id="productCarouselLimit250" class="carousel slide mb-3" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/limit250.png" class="d-block w-100 img-fluid" alt="Limit 250$ - 1">
+            </div>
+            <div class="carousel-item">
+                <img src="img/250limit.jpg" class="d-block w-100 img-fluid" alt="Limit 250$ - 2">
+            </div>
+            <div class="carousel-item">
+                <img src="img/nolimit5.png" class="d-block w-100 img-fluid" alt="Limit 250$ - 3">
+            </div>
+        </div>
+        <!-- Nút điều hướng carousel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarouselLimit250" data-bs-slide="prev" style="background-color: rgba(0, 0, 0, 0.7); width: 40px; height: 40px; border-radius: 50%; top: 50%; transform: translateY(-50%);">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarouselLimit250" data-bs-slide="next" style="background-color: rgba(0, 0, 0, 0.7); width: 40px; height: 40px; border-radius: 50%; top: 50%; transform: translateY(-50%);">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <h4 id="productNameLimit250">Limit 250$</h4>
+    <p id="productPriceLimit250" class="price-highlight">Giá: 40 USD</p>
+    <p id="productDescriptionLimit250">Mô tả: Tài khoản quảng cáo Limit 250$ chất lượng cao, phù hợp với nhu cầu quảng cáo ngân sách lớn.</p>
+    <button onclick="nextStepLimit250(2)" class="btn btn-primary w-100">Continue</button>
+</div>
+                    <!-- Bước 2: Thông tin khách hàng -->
+                    <div id="step2-content-limit250" class="step-content d-none">
+                        <h2 class="mb-4">输入您的信息(Enter your information)</h2>
+                        <div class="mb-3">
+                            <label class="form-label">数量(Quantity) <span class="text-danger">*</span></label>
+                            <select id="quantitySelectLimit250" class="form-select quantity-select" onchange="toggleCustomQuantity('Limit250'); updatePriceLimit250()">
+                                <option value="1">1</option>
+                                <option value="5">5</option>
+                                <option value="10">10 (5% off)</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="50">50 (Giảm 12.5%)</option>
+                                <option value="100">100</option>
+                            </select>
+                            <div id="quantityCustomLimit250" class="quantity-custom">
+                                <input type="number" id="quantityCustomInputLimit250" class="form-control" min="1" value="1" oninput="updatePriceLimit250()">
+                            </div>
+                            <p class="text-muted mt-2">
+                                折扣(Discoun):  <span id="discountPercentLimit250">0%</span> |
+                                价格(Price): $<span id="unitPriceLimit250" class="price-highlight">40</span> / 产品(product) |
+                                全部的(Total): $<span id="totalPriceLimit250" class="price-highlight">40</span>
+                            </p>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">你的名字(Your name)<span class="text-danger">*</span></label>
+                            <input type="text" id="customerNameLimit250" class="form-control required" placeholder="输入#user_TelegramID、 或标识符(Enter #user_TelegramID)" required>
+                            <div class="invalid-feedback">输入#user_TelegramID、#GroupID 或标识符(Enter #user_TelegramID, )</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">BM ID（最多 2 个，以逗号分隔）- BM ID (max 2, separated by commas) <span class="text-danger">*</span></label>
+                            <input type="text" id="bmIdLimit250" class="form-control required" placeholder="BM ID（最多 2 个，以逗号分隔）- BM ID (max 2, separated by commas)" required>
+                            <div class="invalid-feedback">请输入至少 1 个 BM ID。(Please enter at least 1 BM ID.)</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">用于接收通知的电子邮件(Email to receive notifications) <span class="text-danger">*</span></label>
+                            <input type="email" id="emailLimit250" class="form-control required" placeholder="输入电子邮件(Enter email)" required>
+                            <div class="invalid-feedback">请输入有效的电子邮件。(Please enter a valid email.)</div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">附加信息(Additional information)</label>
+                            <textarea id="additionalInfoLimit250" class="form-control" rows="4" placeholder="Additional notes (if any)"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-between gap-3">
+                            <button onclick="prevStepLimit250(1)" class="btn btn-secondary flex-1">Back</button>
+                            <button onclick="validateAndSubmitLimit250()" class="btn btn-primary flex-1">Continue</button>
+                        </div>
+                    </div>
+                   <!-- Bước 3: Đặt hàng thành công -->
+<div id="step3-content-limit250" class="step-content d-none">
+    <img src="img/success.gif" alt="Success GIF" class="success-gif">
+    <h2 class="text-center mb-4 text-success">下单成功！</h2>
+    <p class="text-center text-muted mb-3">感谢您的订购。我们将尽快通过电子邮件与您联系以确认。</p>
+    <p class="text-center text-muted mb-3">Thank you for your order. We will contact you soon via email to confirm.</p>
+        <p class="text-center">
+  订购代码(Order code) : 
+  <span id="orderCodeLimit250" class="order-highlight"></span> 
+  <span class="text-danger">(Please copy this order code.)</span>
+</p
+    <!-- Container chứa nhãn, nút USDT, trường nhập amount, và nút thanh toán -->
+    <div class="center-container">
+        <p class="payment-label">付款方式(Payment method)</p>
+        <div class="payItem selectPay text-center mb-3">
+            <div class="payFunc">
+                <img src="img/usdt.png" alt="USDT" class="itemImg">
+                <div>USDT</div>
+            </div>
+        </div>
+        <!-- Trường nhập amount -->
+        <div class="mb-4 amount-input">
+            <label class="form-label">数量 (Amount)</label>
+            <input id="amountLimit250" class="form-control" type="number" placeholder="输入USDT金额(Enter USDT amount)">
+        </div>
+       <!-- Nút tiến hành thanh toán -->
+<button type="button" class="btn btn-primary mb-3 btn-sm" onclick="showQRPaymentModal('Limit250')">继续付款(Proceed to payment)</button>
+</div>
+<div class="d-flex justify-content-center gap-2">
+    <button onclick="copyOrderCode('Limit250')" class="btn btn-outline-primary btn-sm">复制订单代码(Copy order code)</button>
+    <button onclick="closeOrderModalLimit250()" class="btn btn-primary btn-sm">Đóng</button>
+</div>
+</div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Limit 1500$ -->
+<div class="modal fade orderModal" id="orderModalLimit1500" tabindex="-1" aria-labelledby="orderModalLimit1500Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content home-modal p-4">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="orderModalLimit1500Label">订购产品</h5>
+                <button type="button" class="btn-close btn-close-dark" onclick="closeOrderModalLimit1500()" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Thanh tiến trình -->
+                <div class="d-flex justify-content-between mb-5 position-relative">
+                    <div class="text-center flex-1">
+                        <div class="progress-step bg-primary text-white" id="step1-limit1500">1</div>
+                        <p class="mt-2 small">查看产品信息</p>
+                    </div>
+                    <div class="text-center flex-1">
+                        <div class="progress-step bg-secondary text-white" id="step2-limit1500">2</div>
+                        <p class="mt-2 small">输入您的信息</p>
+                    </div>
+                    <div class="text-center flex-1">
+                        <div class="progress-step bg-secondary text-white" id="step3-limit1500">3</div>
+                        <p class="mt-2 small">下单成功</p>
+                    </div>
+                    <div class="progress-line-container">
+                        <div id="progress-line-limit1500" class="progress-line" style="width: 0%"></div>
+                    </div>
+                </div>
+                <!-- Bước 1: Thông tin sản phẩm -->
+                <div id="step1-content-limit1500" class="step-content">
+                    <h2 class="mb-4">产品信息(Product information)</h2>
+                    <!-- Carousel chứa 5 hình ảnh sản phẩm -->
+                    <div id="productCarouselPersonalLimit250" class="carousel slide mb-3" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/cn2.jpg" class="d-block w-100 img-fluid" alt="Personal Limit 250$ - 1">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#productCarouselPersonalLimit250" data-bs-slide="prev" style="background-color: rgba(0, 0, 0, 0.7); width: 40px; height: 40px; border-radius: 50%; top: 50%; transform: translateY(-50%);">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#productCarouselPersonalLimit250" data-bs-slide="next" style="background-color: rgba(0, 0, 0, 0.7); width: 40px; height: 40px; border-radius: 50%; top: 50%; transform: translateY(-50%);">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <h4 id="productNameLimit1500">Limit 1500$</h4>
+                    <p id="productPriceLimit1500" class="price-highlight">Giá: 45 USD</p>
+                    <p id="productDescriptionLimit1500">Mô tả: Tài khoản quảng cáo Limit 1500$ chất lượng cao, phù hợp với nhu cầu quảng cáo ngân sách lớn.</p>
+                    <button onclick="nextStepLimit1500(2)" class="btn btn-primary w-100">Continue</button>
+                </div>
+                                      <!-- Bước 2: Thông tin khách hàng -->
+                    <div id="step2-content-limit1500" class="step-content d-none">
+                        <h2 class="mb-4">输入您的信息 (Enter your information)</h2>
+                        <div class="mb-3">
+                            <label class="form-label">数量(Quantity) <span class="text-danger">*</span></label>
+                            <select id="quantitySelectLimit1500" class="form-select quantity-select" onchange="toggleCustomQuantity('Limit1500'); updatePriceLimit1500()">
+                                <option value="1">1</option>
+                                <option value="5">5</option>
+                                <option value="10">10 (5% off)</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="50">50 (Giảm 10%)</option>
+                                <option value="100">100</option>
+                            </select>
+                            <div id="quantityCustomLimit1500" class="quantity-custom">
+                                <input type="number" id="quantityCustomInputLimit1500" class="form-control" min="1" value="1" oninput="updatePriceLimit1500()">
+                            </div>
+                            <p class="text-muted mt-2">
+                                折扣(Discoun):  <span id="discountPercentLimit1500">0%</span> |
+                                价格(Price): $<span id="unitPriceLimit1500" class="price-highlight">45</span> / 产品(product) |
+                                全部的(Total): $<span id="totalPriceLimit1500" class="price-highlight">45</span>
+                            </p>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">你的名字(Your name)<span class="text-danger">*</span></label>
+                            <input type="text" id="customerNameLimit1500" class="form-control required" placeholder="输入#user_TelegramID、#GroupID 或标识符(Enter #user_TelegramID)" required>
+                            <div class="invalid-feedback">输入#user_TelegramID、#GroupID 或标识符(Enter #user_TelegramID)</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">BM ID（最多 2 个，以逗号分隔）- BM ID (max 2, separated by commas) <span class="text-danger">*</span></label>
+                            <input type="text" id="bmIdLimit1500" class="form-control required" placeholder="BM ID（最多 2 个，以逗号分隔）- BM ID (max 2, separated by commas)" required>
+                            <div class="invalid-feedback">请输入至少 1 个 BM ID。(Please enter at least 1 BM ID.)</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">用于接收通知的电子邮件(Email to receive notifications) <span class="text-danger">*</span></label>
+                            <input type="email" id="emailLimit1500" class="form-control required" placeholder="输入电子邮件(Enter email)" required>
+                            <div class="invalid-feedback">请输入有效的电子邮件。(Please enter a valid email.)</div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">附加信息(Additional information)</label>
+                            <textarea id="additionalInfoLimit1500" class="form-control" rows="4" placeholder="Additional notes (if any)"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-between gap-3">
+                            <button onclick="prevStepLimit1500(1)" class="btn btn-secondary flex-1">Back</button>
+                            <button onclick="validateAndSubmitLimit1500()" class="btn btn-primary flex-1">Continue</button>
+                        </div>
+                    </div>
+                  <!-- Bước 3: Đặt hàng thành công -->
+<div id="step3-content-limit1500" class="step-content d-none">
+    <img src="img/success.gif" alt="Success GIF" class="success-gif">
+    <h2 class="text-center mb-4 text-success">下单成功！</h2>
+    <p class="text-center text-muted mb-3">感谢您的订购。我们将尽快通过电子邮件与您联系以确认。</p>
+    <p class="text-center text-muted mb-3">Thank you for your order. We will contact you soon via email to confirm.</p>
+    <p class="text-center">
+  订购代码(Order code) : 
+  <span id="orderCodeLimit1500" class="order-highlight"></span> 
+  <span class="text-danger">(Please copy this order code.)</span>
+</p>
+    <!-- Container chứa nhãn, nút USDT, trường nhập amount, và nút thanh toán -->
+    <div class="center-container">
+        <p class="payment-label">付款方式(Payment method)</p>
+        <div class="payItem selectPay text-center mb-3">
+            <div class="payFunc">
+                <img src="img/usdt.png" alt="USDT" class="itemImg">
+                <div>USDT</div>
+            </div>
+        </div>
+        <!-- Trường nhập amount -->
+        <div class="mb-4 amount-input">
+            <label class="form-label">数量 (Amount)</label>
+            <input id="amountLimit1500" class="form-control" type="number" placeholder="输入USDT金额(Enter USDT amount)">
+        </div>
+       <!-- Nút tiến hành thanh toán -->
+<button type="button" class="btn btn-primary mb-3 btn-sm" onclick="showQRPaymentModal('Limit1500')">继续付款(Proceed to payment)</button>
+</div>
+<div class="d-flex justify-content-center gap-2">
+    <button onclick="copyOrderCode('Limit1500')" class="btn btn-outline-primary btn-sm">复制订单代码(Copy order code)</button>
+    <button onclick="closeOrderModalLimit1500()" class="btn btn-primary btn-sm">Đóng</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade orderModal" id="orderModalPersonalLimit250" tabindex="-1" aria-labelledby="orderModalPersonalLimit250Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content home-modal p-4">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="orderModalPersonalLimit250Label">订购产品</h5>
+                <button type="button" class="btn-close btn-close-dark" onclick="closeOrderModalPersonalLimit250()" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Thanh tiến trình -->
+                <div class="d-flex justify-content-between mb-5 position-relative">
+                    <div class="text-center flex-1">
+                        <div class="progress-step bg-primary text-white" id="step1-personallimit250">1</div>
+                        <p class="mt-2 small">查看产品信息</p>
+                    </div>
+                    <div class="text-center flex-1">
+                        <div class="progress-step bg-secondary text-white" id="step2-personallimit250">2</div>
+                        <p class="mt-2 small">输入您的信息</p>
+                    </div>
+                    <div class="text-center flex-1">
+                        <div class="progress-step bg-secondary text-white" id="step3-personallimit250">3</div>
+                        <p class="mt-2 small">下单成功</p>
+                    </div>
+                    <div class="progress-line-container">
+                        <div id="progress-line-personallimit250" class="progress-line" style="width: 0%"></div>
+                    </div>
+                </div>
+                <!-- Bước 1: Thông tin sản phẩm -->
+                <div id="step1-content-personallimit250" class="step-content">
+                    <h2 class="mb-4">产品信息(Product information)</h2>
+                    <!-- Carousel chứa 5 hình ảnh sản phẩm -->
+                    <div id="productCarouselPersonalLimit250" class="carousel slide mb-3" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/tkcn250.jpg" class="d-block w-100 img-fluid" alt="Personal Limit 250$ - 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/nolimit5.png" class="d-block w-100 img-fluid" alt="Personal Limit 250$ - 5">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#productCarouselPersonalLimit250" data-bs-slide="prev" style="background-color: rgba(0, 0, 0, 0.7); width: 40px; height: 40px; border-radius: 50%; top: 50%; transform: translateY(-50%);">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#productCarouselPersonalLimit250" data-bs-slide="next" style="background-color: rgba(0, 0, 0, 0.7); width: 40px; height: 40px; border-radius: 50%; top: 50%; transform: translateY(-50%);">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <h4 id="productNamePersonalLimit250">Tài khoản cá nhân Limit 250$</h4>
+                    <p id="productPricePersonalLimit250" class="price-highlight">Giá: 30 USD</p>
+                    <p id="productDescriptionPersonalLimit250">Mô tả: Tài khoản cá nhân Limit 250$ chất lượng cao, bao gồm Meta Business Manager, quyền truy cập email, và sẵn sàng chạy quảng cáo.</p>
+                    <button onclick="nextStepPersonalLimit250(2)" class="btn btn-primary w-100">Continue</button>
+                </div>
+                <!-- Bước 2: Thông tin khách hàng -->
+                <div id="step2-content-personallimit250" class="step-content d-none">
+                    <h2 class="mb-4">输入您的信息 (Enter your information)</h2>
+                    <div class="mb-3">
+                        <label class="form-label">数量(Quantity) <span class="text-danger">*</span></label>
+                        <select id="quantitySelectPersonalLimit250" class="form-select quantity-select" onchange="toggleCustomQuantity('PersonalLimit250'); updatePricePersonalLimit250()">
+                            <option value="1">1</option>
+                            <option value="5">5</option>
+                            <option value="10">10 (5% off)</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="50">50 (Giảm 10%)</option>
+                            <option value="100">100</option>
+                        </select>
+                        <div id="quantityCustomPersonalLimit250" class="quantity-custom">
+                            <input type="number" id="quantityCustomInputPersonalLimit250" class="form-control" min="1" value="1" oninput="updatePricePersonalLimit250()">
+                        </div>
+                        <p class="text-muted mt-2">
+                            折扣(Discount): <span id="discountPercentPersonalLimit250">0%</span> |
+                            价格(Price): $<span id="unitPricePersonalLimit250" class="price-highlight">30</span> / 产品(product) |
+                            全部的(Total): $<span id="totalPricePersonalLimit250" class="price-highlight">30</span>
+                        </p>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">你的名字(Your name) <span class="text-danger">*</span></label>
+                        <input type="text" id="customerNamePersonalLimit250" class="form-control required" placeholder="输入#user_TelegramID、 或标识符(Enter #user_TelegramID)" required>
+                        <div class="invalid-feedback">请输入#user_TelegramID、#GroupID 或标识符 (Enter #user_TelegramID)</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">BM ID（最多 2 个，以逗号分隔）- BM ID (max 2, separated by commas) <span class="text-danger">*</span></label>
+                        <input type="text" id="bmIdPersonalLimit250" class="form-control required" placeholder="BM ID（最多 2 个，以逗号分隔）- BM ID (max 2, separated by commas)" required>
+                        <div class="invalid-feedback">请输入至少 1 个 BM ID。(Please enter at least 1 BM ID.)</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">用于接收通知的电子邮件(Email to receive notifications)</label>
+                        <input type="email" id="emailPersonalLimit250" class="form-control" placeholder="输入电子邮件(Enter email)">
+                        <div class="invalid-feedback">请输入有效的电子邮件。(Please enter a valid email.)</div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">附加信息(Additional information)</label>
+                        <textarea id="additionalInfoPersonalLimit250" class="form-control" rows="4" placeholder="Additional notes (if any)"></textarea>
+                    </div>
+                    <div class="d-flex justify-content-between gap-3">
+                        <button onclick="prevStepPersonalLimit250(1)" class="btn btn-secondary flex-1">Back</button>
+                        <button onclick="validateAndSubmitPersonalLimit250()" class="btn btn-primary flex-1">Continue</button>
+                    </div>
+                </div>
+                <!-- Bước 3: Đặt hàng thành công -->
+                <div id="step3-content-personallimit250" class="step-content d-none">
+                    <img src="img/success.gif" alt="Success GIF" class="success-gif">
+                    <h2 class="text-center mb-4 text-success">下单成功！</h2>
+                    <p class="text-center text-muted mb-3">感谢您的订购。我们将尽快通过电子邮件与您联系以确认。</p>
+                    <p class="text-center text-muted mb-3">Thank you for your order. We will contact you soon via email to confirm.</p>
+                    <p class="text-center">
+                        订购代码(Order code): <span id="orderCodePersonalLimit250" class="order-highlight"></span> 
+                        <span class="text-danger">(Please copy this order code.)</span>
+                    </p>
+                    <div class="center-container">
+                        <p class="payment-label">付款方式(Payment method)</p>
+                        <div class="payItem selectPay text-center mb-3">
+                            <div class="payFunc">
+                                <img src="img/usdt.png" alt="USDT" class="itemImg">
+                                <div>USDT</div>
+                            </div>
+                        </div>
+                        <div class="mb-4 amount-input">
+                            <label class="form-label">数量 (Amount)</label>
+                            <input id="amountPersonalLimit250" class="form-control" type="number" placeholder="输入USDT金额(Enter USDT amount)">
+                        </div>
+                        <button type="button" class="btn btn-primary mb-3 btn-sm" onclick="showQRPaymentModal('PersonalLimit250')">继续付款(Proceed to payment)</button>
+                    </div>
+                    <div class="d-flex justify-content-center gap-2">
+                        <button onclick="copyOrderCode('PersonalLimit250')" class="btn btn-outline-primary btn-sm">复制订单代码(Copy order code)</button>
+                        <button onclick="closeOrderModalPersonalLimit250()" class="btn btn-primary btn-sm">Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Personal Nolimit-->
+<div class="modal fade orderModal" id="orderModalPersonalNoLimit" tabindex="-1" aria-labelledby="orderModalPersonalNoLimitLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content home-modal p-4">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="orderModalPersonalNoLimitLabel">订购产品</h5>
+                <button type="button" class="btn-close btn-close-dark" onclick="closeOrderModalPersonalNoLimit()" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Thanh tiến trình -->
+                <div class="d-flex justify-content-between mb-5 position-relative">
+                    <div class="text-center flex-1">
+                        <div class="progress-step bg-primary text-white" id="step1-personalnolimit">1</div>
+                        <p class="mt-2 small">查看产品信息</p>
+                    </div>
+                    <div class="text-center flex-1">
+                        <div class="progress-step bg-secondary text-white" id="step2-personalnolimit">2</div>
+                        <p class="mt-2 small">输入您的信息</p>
+                    </div>
+                    <div class="text-center flex-1">
+                        <div class="progress-step bg-secondary text-white" id="step3-personalnolimit">3</div>
+                        <p class="mt-2 small">下单成功</p>
+                    </div>
+                    <div class="progress-line-container">
+                        <div id="progress-line-personalnolimit" class="progress-line" style="width: 0%"></div>
+                    </div>
+                </div>
+                <!-- Bước 1: Thông tin sản phẩm -->
+                <div id="step1-content-personalnolimit" class="step-content">
+                    <h2 class="mb-4">产品信息(Product information)</h2>
+                    <!-- Carousel chứa 5 hình ảnh sản phẩm -->
+                    <div id="productCarouselPersonalNoLimit" class="carousel slide mb-3" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/tkcnnolimit.jpg" class="d-block w-100 img-fluid" alt="Personal NoLimit - 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/nolimit5.png" class="d-block w-100 img-fluid" alt="Personal NoLimit - 5">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#productCarouselPersonalNoLimit" data-bs-slide="prev" style="background-color: rgba(0, 0, 0, 0.7); width: 40px; height: 40px; border-radius: 50%; top: 50%; transform: translateY(-50%);">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#productCarouselPersonalNoLimit" data-bs-slide="next" style="background-color: rgba(0, 0, 0, 0.7); width: 40px; height: 40px; border-radius: 50%; top: 50%; transform: translateY(-50%);">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <h4 id="productNamePersonalNoLimit">Tài khoản cá nhân NoLimit</h4>
+                    <p id="productPricePersonalNoLimit" class="price-highlight">Giá: 50 USD</p>
+                    <p id="productDescriptionPersonalNoLimit">Mô tả: Tài khoản cá nhân NoLimit chất lượng cao, bao gồm Meta Business Manager, quyền truy cập email, tài khoản cũ (2021-2023), và sẵn sàng chạy quảng cáo không giới hạn.</p>
+                    <button onclick="nextStepPersonalNoLimit(2)" class="btn btn-primary w-100">Continue</button>
+                </div>
+                <!-- Bước 2: Thông tin khách hàng -->
+                <div id="step2-content-personalnolimit" class="step-content d-none">
+                    <h2 class="mb-4">输入您的信息 (Enter your information)</h2>
+                    <div class="mb-3">
+                        <label class="form-label">数量(Quantity) <span class="text-danger">*</span></label>
+                        <select id="quantitySelectPersonalNoLimit" class="form-select quantity-select" onchange="toggleCustomQuantity('PersonalNoLimit'); updatePricePersonalNoLimit()">
+                            <option value="1">1</option>
+                            <option value="5">5</option>
+                            <option value="10">10 (5% off)</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="50">50 (Giảm 15%)</option>
+                            <option value="100">100</option>
+                        </select>
+                        <div id="quantityCustomPersonalNoLimit" class="quantity-custom">
+                            <input type="number" id="quantityCustomInputPersonalNoLimit" class="form-control" min="1" value="1" oninput="updatePricePersonalNoLimit()">
+                        </div>
+                        <p class="text-muted mt-2">
+                            折扣(Discount): <span id="discountPercentPersonalNoLimit">0%</span> |
+                            价格(Price): $<span id="unitPricePersonalNoLimit" class="price-highlight">50</span> / 产品(product) |
+                            全部的(Total): $<span id="totalPricePersonalNoLimit" class="price-highlight">50</span>
+                        </p>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">你的名字(Your name) <span class="text-danger">*</span></label>
+                        <input type="text" id="customerNamePersonalNoLimit" class="form-control required" placeholder="输入#user_TelegramID、#GroupID 或标识符(Enter #user_Telegram,)" required>
+                        <div class="invalid-feedback">请输入#user_TelegramID (Enter #user_Telegram,)</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">BM ID（最多 2 个，以逗号分隔）- BM ID (max 2, separated by commas) <span class="text-danger">*</span></label>
+                        <input type="text" id="bmIdPersonalNoLimit" class="form-control required" placeholder="BM ID（最多 2 个，以逗号分隔）- BM ID (max 2, separated by commas)" required>
+                        <div class="invalid-feedback">请输入至少 1 个 BM ID。(Please enter at least 1 BM ID.)</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">用于接收通知的电子邮件(Email to receive notifications)</label>
+                        <input type="email" id="emailPersonalNoLimit" class="form-control" placeholder="输入电子邮件(Enter email)">
+                        <div class="invalid-feedback">请输入有效的电子邮件。(Please enter a valid email.)</div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">附加信息(Additional information)</label>
+                        <textarea id="additionalInfoPersonalNoLimit" class="form-control" rows="4" placeholder="Additional notes (if any)"></textarea>
+                    </div>
+                    <div class="d-flex justify-content-between gap-3">
+                        <button onclick="prevStepPersonalNoLimit(1)" class="btn btn-secondary flex-1">Back</button>
+                        <button onclick="validateAndSubmitPersonalNoLimit()" class="btn btn-primary flex-1">Continue</button>
+                    </div>
+                </div>
+                <!-- Bước 3: Đặt hàng thành công -->
+                <div id="step3-content-personalnolimit" class="step-content d-none">
+                    <img src="img/success.gif" alt="Success GIF" class="success-gif">
+                    <h2 class="text-center mb-4 text-success">下单成功！</h2>
+                    <p class="text-center text-muted mb-3">感谢您的订购。我们将尽快通过电子邮件与您联系以确认。</p>
+                    <p class="text-center text-muted mb-3">Thank you for your order. We will contact you soon via email to confirm.</p>
+                    <p class="text-center">
+                        订购代码(Order code): <span id="orderCodePersonalNoLimit" class="order-highlight"></span> 
+                        <span class="text-danger">(Please copy this order code.)</span>
+                    </p>
+                    <div class="center-container">
+                        <p class="payment-label">付款方式(Payment method)</p>
+                        <div class="payItem selectPay text-center mb-3">
+                            <div class="payFunc">
+                                <img src="img/usdt.png" alt="USDT" class="itemImg">
+                                <div>USDT</div>
+                            </div>
+                        </div>
+                        <div class="mb-4 amount-input">
+                            <label class="form-label">数量 (Amount)</label>
+                            <input id="amountPersonalNoLimit" class="form-control" type="number" placeholder="输入USDT金额(Enter USDT amount)">
+                        </div>
+                        <button type="button" class="btn btn-primary mb-3 btn-sm" onclick="showQRPaymentModal('PersonalNoLimit')">继续付款(Proceed to payment)</button>
+                    </div>
+                    <div class="d-flex justify-content-center gap-2">
+                        <button onclick="copyOrderCode('PersonalNoLimit')" class="btn btn-outline-primary btn-sm">复制订单代码(Copy order code)</button>
+                        <button onclick="closeOrderModalPersonalNoLimit()" class="btn btn-primary btn-sm">Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END MODAL-->
+<!-- Modal Thanh toán QR Chung -->
+<div class="modal fade" id="qrPaymentModal" tabindex="-1" aria-labelledby="qrPaymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-4">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="qrPaymentModalLabel">使用USDT支付(Pay with USDT)</h5>
+                <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6 class="mb-3">订单信息(Order information)</h6>
+                <p class="text-muted">产品(Product) <span id="qrProductName" class="highlight"></span></p>
+                <p class="text-muted">订购代码(Order code): <span id="qrOrderCode" class="highlight"></span></p>
+                <p class="text-muted">总金额(Total amount): <span id="qrTotalPrice" class="highlight"></span></p>
+                <h6 class="mb-3 mt-3">付款方式(Payment method) :</h6>
+                <p class="text-muted"><img src="img/usdt.png" alt="USDT" class="itemImg" style="width: 20px; height: 20px; vertical-align: middle;"> <span id="qrAmount" class="highlight"></span></p>
+                <hr>
+                <h6 class="mb-3">扫描二维码支付(Scan QR code to pay)</h6>
+                <div class="text-center mb-3">
+                    <img src="img/qrbank.jpg" alt="USDT QR Code" class="img-fluid" style="max-width: 200px;">
+                </div>
+                <p class="text-muted text-center">网络(Network) :<span class="highlight">TRX</span></p>
+                <p class="text-muted text-center">地址(Address) : <span class="highlight">TQSELgvNwZ2dbRZgxKEQdhMqZ1r2A8KSx2</span></p>
+                <p class="text-muted text-center">请扫描上方二维码进行转账(Please scan the QR code above to transfer) <span id="qrAmountText" class="highlight"></span> USDT.</p>
+                <p class="text-muted text-center">Time remaining: <span id="paymentTimer">15:00</span></p>
+                <div class="d-flex justify-content-between gap-3">
+                    <button class="btn btn-secondary flex-1" data-bs-dismiss="modal">Cancel</button>
+                    <button onclick="confirmQRPayment()" class="btn btn-primary flex-1">Payment confirmation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- end switcher-->    
+    <!--start back-to-top-->
+    <!--end back-to-top-->
+    <!--Custom js-->
+    <script src="counter.js"></script>
+    <!--Bootstrap Js-->
+    <script src="bootstrap.bundle.min.js"></script>
+    <!-- animation -->
+    <script src="aos.js"></script>
+    <!-- swiper js -->
+    <script src="swiper-bundle.min.js"></script>
+    <!-- contact -->
+    <script src="contact.js"></script>
+    <!-- App Js -->
+    <script src="app.js"></script>
+    <!--Modal Js-->
+    <!--Modal Nolimit-->
+    <!-- JavaScript -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailbrowser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+  CRISP_RUNTIME_CONFIG = { locale: "en" }; // Thêm dòng này
+  window.$crisp = [];
+  window.CRISP_WEBSITE_ID = "7bc512f3-5709-487a-adbb-0a65f598cc4b";
+  (function() {
+    d = document;
+    s = d.createElement("script");
+    s.src = "https://client.crisp.chat/l.js";
+    s.async = 1;
+    d.getElementsByTagName("head")[0].appendChild(s);
+  })();
+</script>
+<script>
+   let timerInterval = null;
+
+function startPaymentTimer() {
+    let timeLeft = 900; // 15 phút = 900 giây
+    const timerElement = document.getElementById('paymentTimer');
+
+    if (!timerElement) {
+        console.error('Không tìm thấy #paymentTimer');
+        return;
+    }
+
+    timerInterval = setInterval(() => {
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            timerElement.textContent = 'Time is up';
+            alert('Payment time has expired. Please try again.');
+            const qrModalElement = document.getElementById('qrPaymentModal');
+            if (qrModalElement) {
+                const qrModal = bootstrap.Modal.getInstance(qrModalElement);
+                if (qrModal) qrModal.hide();
+            }
+            return;
+        }
+
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        timeLeft--;
+    }, 1000);
+}
+
+function stopPaymentTimer() {
+    if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+    }
+}
+
+// Modal USDT
+function showQRPaymentModal(type) {
+    console.log(`showQRPaymentModal called with type: ${type}`);
+
+    // Kiểm tra input số tiền
+    const amountInput = document.getElementById(`amount${type}`);
+    if (!amountInput) {
+        console.error(`Không tìm thấy #amount${type}`);
+        alert('Lỗi hệ thống: Không tìm thấy trường nhập số tiền. Vui lòng thử lại.');
+        return;
+    }
+
+    const amount = parseFloat(amountInput.value);
+    if (!amount || amount <= 0) {
+        console.error(`Invalid USDT Amount: ${amount}`);
+        alert('Please enter a valid USDT amount (greater than 0).');
+        return;
+    }
+
+    // Lấy dữ liệu sản phẩm
+    let productData;
+    switch (type) {
+        case 'Limit1500':
+            productData = currentProductLimit1500;
+            break;
+        case 'NoLimit':
+            productData = currentProductNoLimit;
+            break;
+        case 'Limit250':
+            productData = currentProductLimit250;
+            break;
+        case 'PersonalLimit250':
+            productData = currentProductPersonalLimit250;
+            break;
+        case 'PersonalNoLimit':
+            productData = currentProductPersonalNoLimit;
+            break;    
+        default:
+            console.error('Loại sản phẩm không hợp lệ:', type);
+            alert('Lỗi dữ liệu: Loại sản phẩm không hợp lệ. Vui lòng thử lại.');
+            return;
+    }
+
+    if (!productData || !productData.name) {
+        console.error(`Không tìm thấy dữ liệu sản phẩm cho ${type}`, productData);
+        alert('Lỗi dữ liệu đơn hàng. Vui lòng thử lại.');
+        return;
+    }
+
+    // Kiểm tra mã đơn hàng
+    const orderCodeElement = document.getElementById(`orderCode${type}`);
+    if (!orderCodeElement) {
+        console.error(`Không tìm thấy #orderCode${type}`);
+        alert('Lỗi hệ thống: Không tìm thấy mã đơn hàng. Vui lòng thử lại.');
+        return;
+    }
+
+    // Kiểm tra các phần tử trong modal QR
+    const qrElements = {
+        productName: document.getElementById('qrProductName'),
+        orderCode: document.getElementById('qrOrderCode'),
+        totalPrice: document.getElementById('qrTotalPrice'),
+        amount: document.getElementById('qrAmount'),
+        amountText: document.getElementById('qrAmountText')
+    };
+
+    if (Object.values(qrElements).some(el => !el)) {
+        console.error('Một hoặc nhiều phần tử HTML không tồn tại trong qrPaymentModal', qrElements);
+        alert('Lỗi hệ thống: Không thể hiển thị modal thanh toán. Vui lòng thử lại.');
+        return;
+    }
+
+    // Điền thông tin vào modal
+    qrElements.productName.textContent = productData.name;
+    qrElements.orderCode.textContent = orderCodeElement.textContent;
+    qrElements.totalPrice.textContent = `${productData.totalPrice} USD`;
+    qrElements.amount.textContent = `${amount} USDT`;
+    qrElements.amountText.textContent = `${amount}`;
+
+    // Kiểm tra và mở modal
+    const qrModalElement = document.getElementById('qrPaymentModal');
+    if (!qrModalElement) {
+        console.error('Không tìm thấy #qrPaymentModal trong DOM');
+        alert('Lỗi hệ thống: Không tìm thấy modal thanh toán. Vui lòng thử lại.');
+        return;
+    }
+
+    try {
+        const qrModal = new bootstrap.Modal(qrModalElement);
+        console.log('Mở modal qrPaymentModal...');
+        qrModal.show();
+
+        // Khởi động bộ đếm thời gian
+        startPaymentTimer();
+
+        // Dừng bộ đếm khi modal đóng
+        qrModalElement.addEventListener('hidden.bs.modal', stopPaymentTimer, { once: true });
+    } catch (error) {
+        console.error('Lỗi khi mở qrPaymentModal:', error);
+        alert('Lỗi hệ thống: Không thể mở modal thanh toán. Vui lòng thử lại.');
+    }
+}
+
+function confirmQRPayment() {
+    const qrModalElement = document.getElementById('qrPaymentModal');
+    if (qrModalElement) {
+        const qrModal = bootstrap.Modal.getInstance(qrModalElement);
+        if (qrModal) {
+            console.log('Đóng modal qrPaymentModal...');
+            qrModal.hide();
+        }
+        stopPaymentTimer();
+        alert('Payment has been confirmed. We will check and update the order status soon.');
+    } else {
+        console.error('Không tìm thấy #qrPaymentModal');
+    }
+}
+     // Hàm sao chép mã đơn hàng (giả định từ mã gốc)
+    function copyOrderCode(type) {
+        const orderCode = document.getElementById(`orderCode${type}`).textContent;
+        navigator.clipboard.writeText(orderCode).then(() => {
+            alert('Đã sao chép mã đơn hàng!');
+        }).catch(err => {
+            console.error('Lỗi khi sao chép:', err);
+        });
+    }
+
+    // Hàm đóng modal (giả định từ mã gốc)
+    function closeOrderModalNoLimit() {
+        const modal = document.getElementById('step3-content-nolimit').closest('.modal');
+        if (modal) {
+            const bsModal = bootstrap.Modal.getInstance(modal);
+            if (bsModal) {
+                bsModal.hide();
+            } else {
+                modal.classList.remove('show');
+                modal.style.display = 'none';
+            }
+            document.body.classList.remove('modal-open');
+            const backdrop = document.querySelector('.modal-backdrop');
+            if (backdrop) {
+                backdrop.remove();
+            }
+        }
+    }
+    emailjs.init("YcjBzq52DWJ0EpFL1"); // Thay bằng Public Key thực tế của bạn
+
+    // Hàm tạo mã đơn hàng
+    function generateOrderCode(productPrefix) {
+        const date = new Date();
+        const dateStr = date.toISOString().slice(0, 10).replace(/-/g, '');
+        const timeStr = date.getTime().toString().slice(-5);
+        return `${productPrefix}-${dateStr}-${timeStr}`;
+    }
+
+
+    // Hàm hiển thị/ẩn input số lượng tùy chỉnh
+    function toggleCustomQuantity(prefix) {
+        const select = document.getElementById(`quantitySelect${prefix}`);
+        const customDiv = document.getElementById(`quantityCustom${prefix}`);
+        if (select && customDiv) {
+            customDiv.style.display = select.value === 'custom' ? 'block' : 'none';
+        }
+    }
+
+   // Hàm kiểm tra các trường bắt buộc
+function validateInputs(prefix) {
+    let isValid = true;
+    const requiredFields = [
+        { id: `customerName${prefix}`, message: 'Vui lòng nhập tên khách hàng hoặc định danh Telegram.' },
+        { id: `bmId${prefix}`, message: 'Vui lòng nhập ít nhất một ID BM.' }
+        // Email đã bị loại bỏ khỏi kiểm tra bắt buộc
+    ];
+
+    requiredFields.forEach(field => {
+        const input = document.getElementById(field.id);
+        if (!input || !input.value.trim()) {
+            if (input) input.classList.add('is-invalid');
+            isValid = false;
+        } else {
+            input.classList.remove('is-invalid');
+        }
+    });
+
+    const select = document.getElementById(`quantitySelect${prefix}`);
+    const customInput = document.getElementById(`quantityCustomInput${prefix}`);
+    let quantity = 0;
+
+    if (select && select.value === 'custom' && customInput) {
+        quantity = parseInt(customInput.value) || 0;
+        if (quantity < 1) {
+            customInput.classList.add('is-invalid');
+            isValid = false;
+        } else {
+            customInput.classList.remove('is-invalid');
+        }
+    } else if (select) {
+        quantity = parseInt(select.value) || 0;
+        if (quantity < 1) {
+            select.classList.add('is-invalid');
+            isValid = false;
+        } else {
+            select.classList.remove('is-invalid');
+        }
+    }
+
+    return isValid;
+}
+
+    // Hàm hiển thị thông báo lỗi
+    function showError(prefix, message) {
+        const step2Content = document.getElementById(`step2-content${prefix.toLowerCase().replace('$', '')}`);
+        if (!step2Content) return;
+
+        const existingError = step2Content.querySelector('.alert-danger');
+        if (existingError) existingError.remove();
+
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'alert alert-danger mt-3';
+        errorDiv.textContent = message;
+        step2Content.prepend(errorDiv);
+    }
+
+    // No Limit
+    let currentProductNoLimit = {};
+
+    function showOrderModalNoLimit() {
+        const productName = 'BM Invitation (NoLimit)';
+        const basePrice = 50;
+        const imageUrl = 'img/nolimit.jpg';
+        const description = '描述：旧帐户（2021 年至 2023 年）, 通过您的 BM 实现完全控制和所有权 ,已验证公司，Meta Business 总监（反禁令助推者）, 广告帐户已准备好立即启动广告活动 ,您拥有完全的访问权和所有权。,  我们的 BM 已预先验证且干净 - 更改您的时区、货币和国家/地区 , 更改时区/货币/国家（分享 BM ID） ';
+
+        currentProductNoLimit = { name: productName, image: imageUrl, description: description };
+
+        const nameElement = document.getElementById('productNameNoLimit');
+        const priceElement = document.getElementById('productPriceNoLimit');
+        const imageElement = document.getElementById('productImageNoLimit');
+        const descElement = document.getElementById('productDescriptionNoLimit');
+
+        if (nameElement) nameElement.textContent = productName;
+        if (priceElement) priceElement.textContent = `$${basePrice}`;
+        if (imageElement) imageElement.src = imageUrl;
+        if (descElement) descElement.textContent = `${description}`;
+
+        const selectElement = document.getElementById('quantitySelectNoLimit');
+        if (selectElement) selectElement.value = '1';
+        toggleCustomQuantity('NoLimit');
+        updatePriceNoLimit();
+
+        const modal = document.getElementById('orderModalNoLimit');
+        if (modal) {
+            modal.classList.add('show');
+            modal.style.display = 'block';
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('modal-open');
+
+            const backdrop = document.createElement('div');
+            backdrop.className = 'modal-backdrop fade show';
+            document.body.appendChild(backdrop);
+        }
+    }
+
+    function updatePriceNoLimit() {
+        const select = document.getElementById('quantitySelectNoLimit');
+        const customInput = document.getElementById('quantityCustomInputNoLimit');
+        let quantity = 1;
+
+        if (select && select.value === 'custom' && customInput) {
+            quantity = parseInt(customInput.value) || 1;
+        } else if (select) {
+            quantity = parseInt(select.value) || 1;
+        }
+
+        let unitPrice = 60;
+        let discountPercent = 0;
+
+        if (quantity >= 10) {
+            unitPrice = 57;
+            discountPercent = 5;
+        }
+        if (quantity >= 50) {
+            unitPrice = 51;
+            discountPercent = 15;
+        }
+
+        const totalPrice = quantity * unitPrice;
+
+        const discountElement = document.getElementById('discountPercentNoLimit');
+        const unitPriceElement = document.getElementById('unitPriceNoLimit');
+        const totalPriceElement = document.getElementById('totalPriceNoLimit');
+
+        if (discountElement) discountElement.textContent = `${discountPercent}%`;
+        if (unitPriceElement) unitPriceElement.textContent = `${unitPrice}`;
+        if (totalPriceElement) totalPriceElement.textContent = `${totalPrice}`;
+
+        currentProductNoLimit.quantity = quantity;
+        currentProductNoLimit.unitPrice = unitPrice;
+        currentProductNoLimit.totalPrice = totalPrice;
+    }
+
+    function validateAndSubmitNoLimit() {
+        if (!validateInputs('NoLimit')) return;
+
+        const orderCode = generateOrderCode('NL');
+        currentProductNoLimit.orderCode = orderCode;
+
+        const orderData = {
+            productName: currentProductNoLimit.name,
+            quantity: currentProductNoLimit.quantity,
+            unitPrice: currentProductNoLimit.unitPrice,
+            totalPrice: currentProductNoLimit.totalPrice,
+            customerName: document.getElementById('customerNameNoLimit')?.value.trim() || '',
+            bmId: document.getElementById('bmIdNoLimit')?.value.trim() || '',
+            email: document.getElementById('emailNoLimit')?.value.trim() || '',
+            additionalInfo: document.getElementById('additionalInfoNoLimit')?.value.trim() || 'Không có ghi chú',
+            orderCode: orderCode
+        };
+
+        emailjs.send('service_081djnm', 'template_pwbh6o2', orderData)
+            .then(function(response) {
+                nextStepNoLimit(3, orderCode);
+            }, function(error) {
+                showError('NoLimit', 'Đặt hàng thất bại. Vui lòng thử lại! Lỗi: ' + JSON.stringify(error));
+            });
+    }
+    
+    function copyOrderCode(type) {
+    let orderCodeElement;
+    if (type === 'NoLimit') {
+        orderCodeElement = document.getElementById('orderCodeNoLimit');
+    } else if (type === 'Limit1500') {
+        orderCodeElement = document.getElementById('orderCodeLimit1500');
+    } else if (type === 'Limit250') {
+        orderCodeElement = document.getElementById('orderCodeLimit250');
+    } else if (type === 'PersonalLimit250') {
+        orderCodeElement = document.getElementById('orderCodePersonalLimit250');
+     } else if (type === 'PersonalNoLimit') {
+        orderCodeElement = document.getElementById('orderCodePersonalNoLimit');        
+    } else {
+        alert('Không xác định được loại mã đơn hàng.');
+        return;
+    }
+
+    if (orderCodeElement) {
+        const orderCode = orderCodeElement.textContent;
+        navigator.clipboard.writeText(orderCode).then(() => {
+            alert('Order code has been copied: ' + orderCode);
+        }).catch(err => {
+            console.error('Lỗi khi sao chép mã đơn hàng: ', err);
+            alert('Không thể sao chép mã đơn hàng. Vui lòng thử lại.');
+        });
+    } else {
+        alert('Không tìm thấy mã đơn hàng.');
+    }
+}
+
+    function closeOrderModalNoLimit() {
+        const modal = document.getElementById('orderModalNoLimit');
+        if (modal) {
+            modal.classList.remove('show');
+            modal.style.display = 'none';
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('modal-open');
+
+            const backdrop = document.querySelector('.modal-backdrop');
+            if (backdrop) backdrop.remove();
+        }
+
+        resetModalNoLimit();
+    }
+
+    function nextStepNoLimit(step, orderCode = '') {
+        const contents = document.querySelectorAll('#orderModalNoLimit .step-content');
+        contents.forEach(content => content.classList.add('d-none'));
+
+        const stepContent = document.getElementById(`step${step}-content-nolimit`);
+        if (stepContent) stepContent.classList.remove('d-none');
+
+        const steps = document.querySelectorAll('#orderModalNoLimit .progress-step');
+        steps.forEach(stepCircle => {
+            stepCircle.classList.remove('bg-primary', 'text-white');
+            stepCircle.classList.add('bg-secondary', 'text-white');
+        });
+
+        const stepElement = document.getElementById(`step${step}-nolimit`);
+        if (stepElement) stepElement.classList.add('bg-primary', 'text-white');
+
+        const progressLine = document.getElementById('progress-line-nolimit');
+        if (progressLine) {
+            progressLine.style.width = step >= 2 ? '50%' : '0%';
+        }
+        const progressLine2 = document.getElementById('progress-line-nolimit-2');
+        if (progressLine2) {
+            progressLine2.style.width = step === 3 ? '50%' : '0%';
+        }
+
+        if (step === 3 && orderCode) {
+            const orderCodeElement = document.getElementById('orderCodeNoLimit');
+            if (orderCodeElement) orderCodeElement.textContent = orderCode;
+        }
+    }
+
+    function prevStepNoLimit(step) {
+        nextStepNoLimit(step);
+    }
+
+    function resetModalNoLimit() {
+        const contents = document.querySelectorAll('#orderModalNoLimit .step-content');
+        contents.forEach(content => content.classList.add('d-none'));
+
+        const step1Content = document.getElementById('step1-content-nolimit');
+        if (step1Content) step1Content.classList.remove('d-none');
+
+        const steps = document.querySelectorAll('#orderModalNoLimit .progress-step');
+        steps.forEach(stepCircle => {
+            stepCircle.classList.remove('bg-primary', 'text-white');
+            stepCircle.classList.add('bg-secondary', 'text-white');
+        });
+
+        const step1Element = document.getElementById('step1-nolimit');
+        if (step1Element) step1Element.classList.add('bg-primary', 'text-white');
+
+        const progressLine = document.getElementById('progress-line-nolimit');
+        if (progressLine) progressLine.style.width = '0%';
+        const progressLine2 = document.getElementById('progress-line-nolimit-2');
+        if (progressLine2) progressLine2.style.width = '0%';
+
+        const selectElement = document.getElementById('quantitySelectNoLimit');
+        if (selectElement) selectElement.value = '1';
+
+        const customInput = document.getElementById('quantityCustomInputNoLimit');
+        if (customInput) customInput.value = '1';
+
+        toggleCustomQuantity('NoLimit');
+
+        const customerNameElement = document.getElementById('customerNameNoLimit');
+        if (customerNameElement) customerNameElement.value = '';
+
+        const bmIdElement = document.getElementById('bmIdNoLimit');
+        if (bmIdElement) bmIdElement.value = '';
+
+        const emailElement = document.getElementById('emailNoLimit');
+        if (emailElement) emailElement.value = '';
+
+        const additionalInfoElement = document.getElementById('additionalInfoNoLimit');
+        if (additionalInfoElement) additionalInfoElement.value = '';
+
+        const orderCodeElement = document.getElementById('orderCodeNoLimit');
+        if (orderCodeElement) orderCodeElement.textContent = '';
+
+        updatePriceNoLimit();
+    }
+
+    // Limit 250$
+    let currentProductLimit250 = {};
+
+    function showOrderModalLimit250() {
+        const productName = 'BM Invitation ($250 Limit)';
+        const basePrice = 40;
+        const imageUrl = 'img/250limit.jpg';
+        const description = '描述：没有 Facebook 帐户，只有 BM ,  简洁的 Meta Business Manager , 可立即启动广告活动的广告帐户（每个帐户的广告支出为 250 美元） , 之前被禁止但已恢复（强化反禁令）, 完全控制权和所有权 , 24小时内送达 , 更改时区/货币/国家（分享 BM ID）';
+
+        currentProductLimit250 = { name: productName, image: imageUrl, description: description };
+
+        const nameElement = document.getElementById('productNameLimit250');
+        const priceElement = document.getElementById('productPriceLimit250');
+        const imageElement = document.getElementById('productImageLimit250');
+        const descElement = document.getElementById('productDescriptionLimit250');
+
+        if (nameElement) nameElement.textContent = productName;
+        if (priceElement) priceElement.textContent = `$${basePrice}`;
+        if (imageElement) imageElement.src = imageUrl;
+        if (descElement) descElement.textContent = ` ${description}`;
+
+        const selectElement = document.getElementById('quantitySelectLimit250');
+        if (selectElement) selectElement.value = '1';
+        toggleCustomQuantity('Limit250');
+        updatePriceLimit250();
+
+        const modal = document.getElementById('orderModalLimit250');
+        if (modal) {
+            modal.classList.add('show');
+            modal.style.display = 'block';
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('modal-open');
+
+            const backdrop = document.createElement('div');
+            backdrop.className = 'modal-backdrop fade show';
+            document.body.appendChild(backdrop);
+        }
+    }
+
+    function updatePriceLimit250() {
+        const select = document.getElementById('quantitySelectLimit250');
+        const customInput = document.getElementById('quantityCustomInputLimit250');
+        let quantity = 1;
+
+        if (select && select.value === 'custom' && customInput) {
+            quantity = parseInt(customInput.value) || 1;
+        } else if (select) {
+            quantity = parseInt(select.value) || 1;
+        }
+
+        let unitPrice = 40;
+        let discountPercent = 0;
+
+        if (quantity >= 10) {
+            unitPrice = 38;
+            discountPercent = 5;
+        }
+        if (quantity >= 50) {
+            unitPrice = 35;
+            discountPercent = 12.5;
+        }
+
+        const totalPrice = quantity * unitPrice;
+
+        const discountElement = document.getElementById('discountPercentLimit250');
+        const unitPriceElement = document.getElementById('unitPriceLimit250');
+        const totalPriceElement = document.getElementById('totalPriceLimit250');
+
+        if (discountElement) discountElement.textContent = `${discountPercent}%`;
+        if (unitPriceElement) unitPriceElement.textContent = `${unitPrice}`;
+        if (totalPriceElement) totalPriceElement.textContent = `${totalPrice}`;
+
+        currentProductLimit250.quantity = quantity;
+        currentProductLimit250.unitPrice = unitPrice;
+        currentProductLimit250.totalPrice = totalPrice;
+    }
+
+    function validateAndSubmitLimit250() {
+        if (!validateInputs('Limit250')) return;
+
+        const orderCode = generateOrderCode('L250');
+        currentProductLimit250.orderCode = orderCode;
+
+        const orderData = {
+            productName: currentProductLimit250.name,
+            quantity: currentProductLimit250.quantity,
+            unitPrice: currentProductLimit250.unitPrice,
+            totalPrice: currentProductLimit250.totalPrice,
+            customerName: document.getElementById('customerNameLimit250')?.value.trim() || '',
+            bmId: document.getElementById('bmIdLimit250')?.value.trim() || '',
+            email: document.getElementById('emailLimit250')?.value.trim() || '',
+            additionalInfo: document.getElementById('additionalInfoLimit250')?.value.trim() || 'Không có ghi chú',
+            orderCode: orderCode
+        };
+
+        emailjs.send('service_081djnm', 'template_pwbh6o2', orderData)
+            .then(function(response) {
+                nextStepLimit250(3, orderCode);
+            }, function(error) {
+                showError('Limit250', 'Đặt hàng thất bại. Vui lòng thử lại! Lỗi: ' + JSON.stringify(error));
+            });
+    }
+
+    function closeOrderModalLimit250() {
+        const modal = document.getElementById('orderModalLimit250');
+        if (modal) {
+            modal.classList.remove('show');
+            modal.style.display = 'none';
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('modal-open');
+
+            const backdrop = document.querySelector('.modal-backdrop');
+            if (backdrop) backdrop.remove();
+        }
+
+        resetModalLimit250();
+    }
+
+    function nextStepLimit250(step, orderCode = '') {
+        const contents = document.querySelectorAll('#orderModalLimit250 .step-content');
+        contents.forEach(content => content.classList.add('d-none'));
+
+        const stepContent = document.getElementById(`step${step}-content-limit250`);
+        if (stepContent) stepContent.classList.remove('d-none');
+
+        const steps = document.querySelectorAll('#orderModalLimit250 .progress-step');
+        steps.forEach(stepCircle => {
+            stepCircle.classList.remove('bg-primary', 'text-white');
+            stepCircle.classList.add('bg-secondary', 'text-white');
+        });
+
+        const stepElement = document.getElementById(`step${step}-limit250`);
+        if (stepElement) stepElement.classList.add('bg-primary', 'text-white');
+
+        const progressLine = document.getElementById('progress-line-limit250');
+        if (progressLine) {
+            progressLine.style.width = step >= 2 ? '50%' : '0%';
+        }
+        const progressLine2 = document.getElementById('progress-line-limit250-2');
+        if (progressLine2) {
+            progressLine2.style.width = step === 3 ? '50%' : '0%';
+        }
+
+        if (step === 3 && orderCode) {
+            const orderCodeElement = document.getElementById('orderCodeLimit250');
+            if (orderCodeElement) orderCodeElement.textContent = orderCode;
+        }
+    }
+
+    function prevStepLimit250(step) {
+        nextStepLimit250(step);
+    }
+
+    function resetModalLimit250() {
+        const contents = document.querySelectorAll('#orderModalLimit250 .step-content');
+        contents.forEach(content => content.classList.add('d-none'));
+
+        const step1Content = document.getElementById('step1-content-limit250');
+        if (step1Content) step1Content.classList.remove('d-none');
+
+        const steps = document.querySelectorAll('#orderModalLimit250 .progress-step');
+        steps.forEach(stepCircle => {
+            stepCircle.classList.remove('bg-primary', 'text-white');
+            stepCircle.classList.add('bg-secondary', 'text-white');
+        });
+
+        const step1Element = document.getElementById('step1-limit250');
+        if (step1Element) step1Element.classList.add('bg-primary', 'text-white');
+
+        const progressLine = document.getElementById('progress-line-limit250');
+        if (progressLine) progressLine.style.width = '0%';
+        const progressLine2 = document.getElementById('progress-line-limit250-2');
+        if (progressLine2) progressLine2.style.width = '0%';
+
+        const selectElement = document.getElementById('quantitySelectLimit250');
+        if (selectElement) selectElement.value = '1';
+
+        const customInput = document.getElementById('quantityCustomInputLimit250');
+        if (customInput) customInput.value = '1';
+
+        toggleCustomQuantity('Limit250');
+
+        const customerNameElement = document.getElementById('customerNameLimit250');
+        if (customerNameElement) customerNameElement.value = '';
+
+        const bmIdElement = document.getElementById('bmIdLimit250');
+        if (bmIdElement) bmIdElement.value = '';
+
+        const emailElement = document.getElementById('emailLimit250');
+        if (emailElement) emailElement.value = '';
+
+        const additionalInfoElement = document.getElementById('additionalInfoLimit250');
+        if (additionalInfoElement) additionalInfoElement.value = '';
+
+        const orderCodeElement = document.getElementById('orderCodeLimit250');
+        if (orderCodeElement) orderCodeElement.textContent = '';
+
+        updatePriceLimit250();
+    }
+
+    // Personal 1500$
+    let currentProductLimit1500 = {};
+
+    function showOrderModalLimit1500() {
+        const productName = 'Personal account 1500$ Limit';
+        const basePrice = 55;
+        const imageUrl = 'img/1500limit.jpg';
+        const description = '描述：简洁的 Meta Business Manager。, 广告帐户可立即启动广告活动 , 包括邮件访问 , 完全控制权和所有权 , 24小时内送达';
+
+        currentProductLimit1500 = { name: productName, image: imageUrl, description: description };
+
+        const nameElement = document.getElementById('productNameLimit1500');
+        const priceElement = document.getElementById('productPriceLimit1500');
+        const imageElement = document.getElementById('productImageLimit1500');
+        const descElement = document.getElementById('productDescriptionLimit1500');
+
+        if (nameElement) nameElement.textContent = productName;
+        if (priceElement) priceElement.textContent = `$${basePrice}`;
+        if (imageElement) imageElement.src = imageUrl;
+        if (descElement) descElement.textContent = `${description}`;
+
+        const selectElement = document.getElementById('quantitySelectLimit1500');
+        if (selectElement) selectElement.value = '1';
+        toggleCustomQuantity('Limit1500');
+        updatePriceLimit1500();
+
+        const modal = document.getElementById('orderModalLimit1500');
+        if (modal) {
+            modal.classList.add('show');
+            modal.style.display = 'block';
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('modal-open');
+
+            const backdrop = document.createElement('div');
+            backdrop.className = 'modal-backdrop fade show';
+            document.body.appendChild(backdrop);
+        }
+    }
+
+    function updatePriceLimit1500() {
+        const select = document.getElementById('quantitySelectLimit1500');
+        const customInput = document.getElementById('quantityCustomInputLimit1500');
+        let quantity = 1;
+
+        if (select && select.value === 'custom' && customInput) {
+            quantity = parseInt(customInput.value) || 1;
+        } else if (select) {
+            quantity = parseInt(select.value) || 1;
+        }
+
+        let unitPrice = 45;
+        let discountPercent = 0;
+
+        if (quantity >= 10) {
+            unitPrice = 42.75;
+            discountPercent = 5;
+        }
+        if (quantity >= 50) {
+            unitPrice = 40.5;
+            discountPercent = 10;
+        }
+
+        const totalPrice = quantity * unitPrice;
+
+        const discountElement = document.getElementById('discountPercentLimit1500');
+        const unitPriceElement = document.getElementById('unitPriceLimit1500');
+        const totalPriceElement = document.getElementById('totalPriceLimit1500');
+
+        if (discountElement) discountElement.textContent = `${discountPercent}%`;
+        if (unitPriceElement) unitPriceElement.textContent = `${unitPrice}`;
+        if (totalPriceElement) totalPriceElement.textContent = `${totalPrice}`;
+
+        currentProductLimit1500.quantity = quantity;
+        currentProductLimit1500.unitPrice = unitPrice;
+        currentProductLimit1500.totalPrice = totalPrice;
+    }
+
+    function validateAndSubmitLimit1500() {
+        if (!validateInputs('Limit1500')) return;
+
+        const orderCode = generateOrderCode('L1500');
+        currentProductLimit1500.orderCode = orderCode;
+
+        const orderData = {
+            productName: currentProductLimit1500.name,
+            quantity: currentProductLimit1500.quantity,
+            unitPrice: currentProductLimit1500.unitPrice,
+            totalPrice: currentProductLimit1500.totalPrice,
+            customerName: document.getElementById('customerNameLimit1500')?.value.trim() || '',
+            bmId: document.getElementById('bmIdLimit1500')?.value.trim() || '',
+            email: document.getElementById('emailLimit1500')?.value.trim() || '',
+            additionalInfo: document.getElementById('additionalInfoLimit1500')?.value.trim() || 'Không có ghi chú',
+            orderCode: orderCode
+        };
+
+        emailjs.send('service_081djnm', 'template_pwbh6o2', orderData)
+            .then(function(response) {
+                nextStepLimit1500(3, orderCode);
+            }, function(error) {
+                showError('Limit1500', 'Đặt hàng thất bại. Vui lòng thử lại! Lỗi: ' + JSON.stringify(error));
+            });
+    }
+
+    function closeOrderModalLimit1500() {
+        const modal = document.getElementById('orderModalLimit1500');
+        if (modal) {
+            modal.classList.remove('show');
+            modal.style.display = 'none';
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('modal-open');
+
+            const backdrop = document.querySelector('.modal-backdrop');
+            if (backdrop) backdrop.remove();
+        }
+
+        resetModalLimit1500();
+    }
+
+    function nextStepLimit1500(step, orderCode = '') {
+        const contents = document.querySelectorAll('#orderModalLimit1500 .step-content');
+        contents.forEach(content => content.classList.add('d-none'));
+
+        const stepContent = document.getElementById(`step${step}-content-limit1500`);
+        if (stepContent) stepContent.classList.remove('d-none');
+
+        const steps = document.querySelectorAll('#orderModalLimit1500 .progress-step');
+        steps.forEach(stepCircle => {
+            stepCircle.classList.remove('bg-primary', 'text-white');
+            stepCircle.classList.add('bg-secondary', 'text-white');
+        });
+
+        const stepElement = document.getElementById(`step${step}-limit1500`);
+        if (stepElement) stepElement.classList.add('bg-primary', 'text-white');
+
+        const progressLine = document.getElementById('progress-line-limit1500');
+        if (progressLine) {
+            progressLine.style.width = step >= 2 ? '50%' : '0%';
+        }
+        const progressLine2 = document.getElementById('progress-line-limit1500-2');
+        if (progressLine2) {
+            progressLine2.style.width = step === 3 ? '50%' : '0%';
+        }
+
+        if (step === 3 && orderCode) {
+            const orderCodeElement = document.getElementById('orderCodeLimit1500');
+            if (orderCodeElement) orderCodeElement.textContent = orderCode;
+        }
+    }
+
+    function prevStepLimit1500(step) {
+        nextStepLimit1500(step);
+    }
+
+    function resetModalLimit1500() {
+        const contents = document.querySelectorAll('#orderModalLimit1500 .step-content');
+        contents.forEach(content => content.classList.add('d-none'));
+
+        const step1Content = document.getElementById('step1-content-limit1500');
+        if (step1Content) step1Content.classList.remove('d-none');
+
+        const steps = document.querySelectorAll('#orderModalLimit1500 .progress-step');
+        steps.forEach(stepCircle => {
+            stepCircle.classList.remove('bg-primary', 'text-white');
+            stepCircle.classList.add('bg-secondary', 'text-white');
+        });
+
+        const step1Element = document.getElementById('step1-limit1500');
+        if (step1Element) step1Element.classList.add('bg-primary', 'text-white');
+
+        const progressLine = document.getElementById('progress-line-limit1500');
+        if (progressLine) progressLine.style.width = '0%';
+        const progressLine2 = document.getElementById('progress-line-limit1500-2');
+        if (progressLine2) progressLine2.style.width = '0%';
+
+        const selectElement = document.getElementById('quantitySelectLimit1500');
+        if (selectElement) selectElement.value = '1';
+
+        const customInput = document.getElementById('quantityCustomInputLimit1500');
+        if (customInput) customInput.value = '1';
+
+        toggleCustomQuantity('Limit1500');
+
+        const customerNameElement = document.getElementById('customerNameLimit1500');
+        if (customerNameElement) customerNameElement.value = '';
+
+        const bmIdElement = document.getElementById('bmIdLimit1500');
+        if (bmIdElement) bmIdElement.value = '';
+
+        const emailElement = document.getElementById('emailLimit1500');
+        if (emailElement) emailElement.value = '';
+
+        const additionalInfoElement = document.getElementById('additionalInfoLimit1500');
+        if (additionalInfoElement) additionalInfoElement.value = '';
+
+        const orderCodeElement = document.getElementById('orderCodeLimit1500');
+        if (orderCodeElement) orderCodeElement.textContent = '';
+
+        updatePriceLimit1500();
+    }
+    //Personal 250$
+    let currentProductPersonalLimit250 = {};
+
+function showOrderModalPersonalLimit250() {
+    const productName = 'Personal account 250$ Limit';
+    const basePrice = 35;
+    const imageUrl = 'img/personallimit250.jpg';
+    const description = '描述：简洁的 Meta Business Manager, 广告帐户可立即启动广告活动, 包括邮件访问, 完全控制权和所有权, 24小时内送达 (Clean Meta Business Manager, Ad account ready to launch campaigns, Includes email access, Full control and ownership, Delivered within 24 hours)';
+
+    currentProductPersonalLimit250 = { name: productName, image: imageUrl, description: description };
+
+    const nameElement = document.getElementById('productNamePersonalLimit250');
+    const priceElement = document.getElementById('productPricePersonalLimit250');
+    const imageElement = document.getElementById('productImagePersonalLimit250');
+    const descElement = document.getElementById('productDescriptionPersonalLimit250');
+
+    if (nameElement) nameElement.textContent = productName;
+    if (priceElement) priceElement.textContent = `$${basePrice}`;
+    if (imageElement) imageElement.src = imageUrl;
+    if (descElement) descElement.textContent = description;
+
+    const selectElement = document.getElementById('quantitySelectPersonalLimit250');
+    if (selectElement) selectElement.value = '1';
+    toggleCustomQuantity('PersonalLimit250');
+    updatePricePersonalLimit250();
+
+    const modal = document.getElementById('orderModalPersonalLimit250');
+    if (modal) {
+        modal.classList.add('show');
+        modal.style.display = 'block';
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+
+        const backdrop = document.createElement('div');
+        backdrop.className = 'modal-backdrop fade show';
+        document.body.appendChild(backdrop);
+    } else {
+        console.error('Modal orderModalPersonalLimit250 not found');
+        alert('Lỗi hệ thống: Không tìm thấy modal đặt hàng.');
+    }
+}
+
+function updatePricePersonalLimit250() {
+    const select = document.getElementById('quantitySelectPersonalLimit250');
+    const customInput = document.getElementById('quantityCustomInputPersonalLimit250');
+    let quantity = 1;
+
+    if (select && select.value === 'custom' && customInput) {
+        quantity = parseInt(customInput.value) || 1;
+    } else if (select) {
+        quantity = parseInt(select.value) || 1;
+    }
+
+    let unitPrice = 30;
+    let discountPercent = 0;
+
+    if (quantity >= 10) {
+        unitPrice = 28.5;
+        discountPercent = 5;
+    }
+    if (quantity >= 50) {
+        unitPrice = 27;
+        discountPercent = 10;
+    }
+
+    const totalPrice = quantity * unitPrice;
+
+    const discountElement = document.getElementById('discountPercentPersonalLimit250');
+    const unitPriceElement = document.getElementById('unitPricePersonalLimit250');
+    const totalPriceElement = document.getElementById('totalPricePersonalLimit250');
+
+    if (discountElement) discountElement.textContent = `${discountPercent}%`;
+    if (unitPriceElement) unitPriceElement.textContent = `${unitPrice}`;
+    if (totalPriceElement) totalPriceElement.textContent = `${totalPrice}`;
+
+    currentProductPersonalLimit250.quantity = quantity;
+    currentProductPersonalLimit250.unitPrice = unitPrice;
+    currentProductPersonalLimit250.totalPrice = totalPrice;
+}
+
+function validateAndSubmitPersonalLimit250() {
+    if (!validateInputs('PersonalLimit250')) return;
+
+    const orderCode = generateOrderCode('PL250');
+    currentProductPersonalLimit250.orderCode = orderCode;
+
+    const orderData = {
+        productName: currentProductPersonalLimit250.name,
+        quantity: currentProductPersonalLimit250.quantity,
+        unitPrice: currentProductPersonalLimit250.unitPrice,
+        totalPrice: currentProductPersonalLimit250.totalPrice,
+        customerName: document.getElementById('customerNamePersonalLimit250')?.value.trim() || '',
+        bmId: document.getElementById('bmIdPersonalLimit250')?.value.trim() || '',
+        email: document.getElementById('emailPersonalLimit250')?.value.trim() || '',
+        additionalInfo: document.getElementById('additionalInfoPersonalLimit250')?.value.trim() || 'Không có ghi chú',
+        orderCode: orderCode
+    };
+
+    emailjs.send('service_081djnm', 'template_pwbh6o2', orderData)
+        .then(function(response) {
+            nextStepPersonalLimit250(3, orderCode);
+        }, function(error) {
+            showError('PersonalLimit250', 'Đặt hàng thất bại. Vui lòng thử lại! Lỗi: ' + JSON.stringify(error));
+        });
+}
+
+function closeOrderModalPersonalLimit250() {
+    const modal = document.getElementById('orderModalPersonalLimit250');
+    if (modal) {
+        modal.classList.remove('show');
+        modal.style.display = 'none';
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+
+        const backdrop = document.querySelector('.modal-backdrop');
+        if (backdrop) backdrop.remove();
+    }
+
+    resetModalPersonalLimit250();
+}
+
+function nextStepPersonalLimit250(step, orderCode = '') {
+    const contents = document.querySelectorAll('#orderModalPersonalLimit250 .step-content');
+    contents.forEach(content => content.classList.add('d-none'));
+
+    const stepContent = document.getElementById(`step${step}-content-personallimit250`);
+    if (stepContent) stepContent.classList.remove('d-none');
+
+    const steps = document.querySelectorAll('#orderModalPersonalLimit250 .progress-step');
+    steps.forEach(stepCircle => {
+        stepCircle.classList.remove('bg-primary', 'text-white');
+        stepCircle.classList.add('bg-secondary', 'text-white');
+    });
+
+    const stepElement = document.getElementById(`step${step}-personallimit250`);
+    if (stepElement) stepElement.classList.add('bg-primary', 'text-white');
+
+    const progressLine = document.getElementById('progress-line-personallimit250');
+    if (progressLine) {
+        progressLine.style.width = step >= 2 ? '50%' : '0%';
+    }
+    const progressLine2 = document.getElementById('progress-line-personallimit250-2');
+    if (progressLine2) {
+        progressLine2.style.width = step === 3 ? '50%' : '0%';
+    }
+
+    if (step === 3 && orderCode) {
+        const orderCodeElement = document.getElementById('orderCodePersonalLimit250');
+        if (orderCodeElement) orderCodeElement.textContent = orderCode;
+    }
+}
+
+function prevStepPersonalLimit250(step) {
+    nextStepPersonalLimit250(step);
+}
+
+function resetModalPersonalLimit250() {
+    const contents = document.querySelectorAll('#orderModalPersonalLimit250 .step-content');
+    contents.forEach(content => content.classList.add('d-none'));
+
+    const step1Content = document.getElementById('step1-content-personallimit250');
+    if (step1Content) step1Content.classList.remove('d-none');
+
+    const steps = document.querySelectorAll('#orderModalPersonalLimit250 .progress-step');
+    steps.forEach(stepCircle => {
+        stepCircle.classList.remove('bg-primary', 'text-white');
+        stepCircle.classList.add('bg-secondary', 'text-white');
+    });
+
+    const step1Element = document.getElementById('step1-personallimit250');
+    if (step1Element) step1Element.classList.add('bg-primary', 'text-white');
+
+    const progressLine = document.getElementById('progress-line-personallimit250');
+    if (progressLine) progressLine.style.width = '0%';
+    const progressLine2 = document.getElementById('progress-line-personallimit250-2');
+    if (progressLine2) progressLine2.style.width = '0%';
+
+    const selectElement = document.getElementById('quantitySelectPersonalLimit250');
+    if (selectElement) selectElement.value = '1';
+
+    const customInput = document.getElementById('quantityCustomInputPersonalLimit250');
+    if (customInput) customInput.value = '1';
+
+    toggleCustomQuantity('PersonalLimit250');
+
+    const customerNameElement = document.getElementById('customerNamePersonalLimit250');
+    if (customerNameElement) customerNameElement.value = '';
+
+    const bmIdElement = document.getElementById('bmIdPersonalLimit250');
+    if (bmIdElement) bmIdElement.value = '';
+
+    const emailElement = document.getElementById('emailPersonalLimit250');
+    if (emailElement) emailElement.value = '';
+
+    const additionalInfoElement = document.getElementById('additionalInfoPersonalLimit250');
+    if (additionalInfoElement) additionalInfoElement.value = '';
+
+    const orderCodeElement = document.getElementById('orderCodePersonalLimit250');
+    if (orderCodeElement) orderCodeElement.textContent = '';
+
+    updatePricePersonalLimit250();
+}
+//Personal Nolimit
+let currentProductPersonalNoLimit = {};
+
+function showOrderModalPersonalNoLimit() {
+    const productName = 'Personal account NoLimit';
+    const basePrice = 45;
+    const imageUrl = 'img/personallimitnolimit.jpg';
+    const description = '描述：旧帐户（2021 年至 2023 年）, 简洁的 Meta Business Manager, 包括邮件访问, 完全控制权和所有权, 24小时内送达 (Old account 2021-2023, Clean Meta Business Manager, Includes email access, Full control and ownership, Delivered within 24 hours)';
+
+    currentProductPersonalNoLimit = { name: productName, image: imageUrl, description: description };
+
+    const nameElement = document.getElementById('productNamePersonalNoLimit');
+    const priceElement = document.getElementById('productPricePersonalNoLimit');
+    const imageElement = document.getElementById('productImagePersonalNoLimit');
+    const descElement = document.getElementById('productDescriptionPersonalNoLimit');
+
+    if (nameElement) nameElement.textContent = productName;
+    if (priceElement) priceElement.textContent = `$${basePrice}`;
+    if (imageElement) imageElement.src = imageUrl;
+    if (descElement) descElement.textContent = description;
+
+    const selectElement = document.getElementById('quantitySelectPersonalNoLimit');
+    if (selectElement) selectElement.value = '1';
+    toggleCustomQuantity('PersonalNoLimit');
+    updatePricePersonalNoLimit();
+
+    const modal = document.getElementById('orderModalPersonalNoLimit');
+    if (modal) {
+        modal.classList.add('show');
+        modal.style.display = 'block';
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+
+        const backdrop = document.createElement('div');
+        backdrop.className = 'modal-backdrop fade show';
+        document.body.appendChild(backdrop);
+    } else {
+        console.error('Modal orderModalPersonalNoLimit not found');
+        alert('Lỗi hệ thống: Không tìm thấy modal đặt hàng.');
+    }
+}
+
+function updatePricePersonalNoLimit() {
+    const select = document.getElementById('quantitySelectPersonalNoLimit');
+    const customInput = document.getElementById('quantityCustomInputPersonalNoLimit');
+    let quantity = 1;
+
+    if (select && select.value === 'custom' && customInput) {
+        quantity = parseInt(customInput.value) || 1;
+    } else if (select) {
+        quantity = parseInt(select.value) || 1;
+    }
+
+    let unitPrice = 50;
+    let discountPercent = 0;
+
+    if (quantity >= 10) {
+        unitPrice = 47.5;
+        discountPercent = 5;
+    }
+    if (quantity >= 50) {
+        unitPrice = 42.5;
+        discountPercent = 15;
+    }
+
+    const totalPrice = quantity * unitPrice;
+
+    const discountElement = document.getElementById('discountPercentPersonalNoLimit');
+    const unitPriceElement = document.getElementById('unitPricePersonalNoLimit');
+    const totalPriceElement = document.getElementById('totalPricePersonalNoLimit');
+
+    if (discountElement) discountElement.textContent = `${discountPercent}%`;
+    if (unitPriceElement) unitPriceElement.textContent = `${unitPrice}`;
+    if (totalPriceElement) totalPriceElement.textContent = `${totalPrice}`;
+
+    currentProductPersonalNoLimit.quantity = quantity;
+    currentProductPersonalNoLimit.unitPrice = unitPrice;
+    currentProductPersonalNoLimit.totalPrice = totalPrice;
+}
+
+function validateAndSubmitPersonalNoLimit() {
+    if (!validateInputs('PersonalNoLimit')) return;
+
+    const orderCode = generateOrderCode('PNL');
+    currentProductPersonalNoLimit.orderCode = orderCode;
+
+    const orderData = {
+        productName: currentProductPersonalNoLimit.name,
+        quantity: currentProductPersonalNoLimit.quantity,
+        unitPrice: currentProductPersonalNoLimit.unitPrice,
+        totalPrice: currentProductPersonalNoLimit.totalPrice,
+        customerName: document.getElementById('customerNamePersonalNoLimit')?.value.trim() || '',
+        bmId: document.getElementById('bmIdPersonalNoLimit')?.value.trim() || '',
+        email: document.getElementById('emailPersonalNoLimit')?.value.trim() || '',
+        additionalInfo: document.getElementById('additionalInfoPersonalNoLimit')?.value.trim() || 'Không có ghi chú',
+        orderCode: orderCode
+    };
+
+    emailjs.send('service_081djnm', 'template_pwbh6o2', orderData)
+        .then(function(response) {
+            nextStepPersonalNoLimit(3, orderCode);
+        }, function(error) {
+            showError('PersonalNoLimit', 'Đặt hàng thất bại. Vui lòng thử lại! Lỗi: ' + JSON.stringify(error));
+        });
+}
+
+function closeOrderModalPersonalNoLimit() {
+    const modal = document.getElementById('orderModalPersonalNoLimit');
+    if (modal) {
+        modal.classList.remove('show');
+        modal.style.display = 'none';
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+
+        const backdrop = document.querySelector('.modal-backdrop');
+        if (backdrop) backdrop.remove();
+    }
+
+    resetModalPersonalNoLimit();
+}
+
+function nextStepPersonalNoLimit(step, orderCode = '') {
+    const contents = document.querySelectorAll('#orderModalPersonalNoLimit .step-content');
+    contents.forEach(content => content.classList.add('d-none'));
+
+    const stepContent = document.getElementById(`step${step}-content-personalnolimit`);
+    if (stepContent) stepContent.classList.remove('d-none');
+
+    const steps = document.querySelectorAll('#orderModalPersonalNoLimit .progress-step');
+    steps.forEach(stepCircle => {
+        stepCircle.classList.remove('bg-primary', 'text-white');
+        stepCircle.classList.add('bg-secondary', 'text-white');
+    });
+
+    const stepElement = document.getElementById(`step${step}-personalnolimit`);
+    if (stepElement) stepElement.classList.add('bg-primary', 'text-white');
+
+    const progressLine = document.getElementById('progress-line-personalnolimit');
+    if (progressLine) {
+        progressLine.style.width = step >= 2 ? '50%' : '0%';
+    }
+    const progressLine2 = document.getElementById('progress-line-personalnolimit-2');
+    if (progressLine2) {
+        progressLine2.style.width = step === 3 ? '50%' : '0%';
+    }
+
+    if (step === 3 && orderCode) {
+        const orderCodeElement = document.getElementById('orderCodePersonalNoLimit');
+        if (orderCodeElement) orderCodeElement.textContent = orderCode;
+    }
+}
+
+function prevStepPersonalNoLimit(step) {
+    nextStepPersonalNoLimit(step);
+}
+
+function resetModalPersonalNoLimit() {
+    const contents = document.querySelectorAll('#orderModalPersonalNoLimit .step-content');
+    contents.forEach(content => content.classList.add('d-none'));
+
+    const step1Content = document.getElementById('step1-content-personalnolimit');
+    if (step1Content) step1Content.classList.remove('d-none');
+
+    const steps = document.querySelectorAll('#orderModalPersonalNoLimit .progress-step');
+    steps.forEach(stepCircle => {
+        stepCircle.classList.remove('bg-primary', 'text-white');
+        stepCircle.classList.add('bg-secondary', 'text-white');
+    });
+
+    const step1Element = document.getElementById('step1-personalnolimit');
+    if (step1Element) step1Element.classList.add('bg-primary', 'text-white');
+
+    const progressLine = document.getElementById('progress-line-personalnolimit');
+    if (progressLine) progressLine.style.width = '0%';
+    const progressLine2 = document.getElementById('progress-line-personalnolimit-2');
+    if (progressLine2) progressLine2.style.width = '0%';
+
+    const selectElement = document.getElementById('quantitySelectPersonalNoLimit');
+    if (selectElement) selectElement.value = '1';
+
+    const customInput = document.getElementById('quantityCustomInputPersonalNoLimit');
+    if (customInput) customInput.value = '1';
+
+    toggleCustomQuantity('PersonalNoLimit');
+
+    const customerNameElement = document.getElementById('customerNamePersonalNoLimit');
+    if (customerNameElement) customerNameElement.value = '';
+
+    const bmIdElement = document.getElementById('bmIdPersonalNoLimit');
+    if (bmIdElement) bmIdElement.value = '';
+
+    const emailElement = document.getElementById('emailPersonalNoLimit');
+    if (emailElement) emailElement.value = '';
+
+    const additionalInfoElement = document.getElementById('additionalInfoPersonalNoLimit');
+    if (additionalInfoElement) additionalInfoElement.value = '';
+
+    const orderCodeElement = document.getElementById('orderCodePersonalNoLimit');
+    if (orderCodeElement) orderCodeElement.textContent = '';
+
+    updatePricePersonalNoLimit();
+}
+    document.addEventListener('keydown', function(event) {
+    // Chặn F12
+    if (event.key === 'F12') {
+        event.preventDefault();
+        alert('Vui lòng không mở DevTools!');
+        return false;
+    }
+
+    // Chặn Ctrl+U (xem mã nguồn)
+    if (event.ctrlKey && event.key === 'u') {
+        event.preventDefault();
+        alert('Xem mã nguồn không được phép!');
+        return false;
+    }
+
+    // Chặn Ctrl+Shift+I (mở DevTools)
+    if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+        event.preventDefault();
+        alert('Mở DevTools không được phép!');
+        return false;
+    }
+
+    // Chặn Ctrl+Shift+J (mở Console)
+    if (event.ctrlKey && event.shiftKey && event.key === 'J') {
+        event.preventDefault();
+        alert('Mở Console không được phép!');
+        return false;
+    }
+});
+
+</script>
+</body>
 </html>
